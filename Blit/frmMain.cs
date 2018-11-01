@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Blit
@@ -17,7 +10,7 @@ namespace Blit
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void frmMain_Load(object sender, EventArgs e)
         {
             //sakht shey az PersianCalendar
             System.Globalization.PersianCalendar p = new System.Globalization.PersianCalendar();
@@ -67,6 +60,46 @@ namespace Blit
         private void btnUser_Click(object sender, EventArgs e)
         {
             new frmUsers().ShowDialog();
+        }
+
+        private void btnGroups_Click(object sender, EventArgs e)
+        {
+            new frmGroups().ShowDialog();
+        }
+
+        private void btnListGroups_Click(object sender, EventArgs e)
+        {
+            new frmListGroups().ShowDialog();
+        }
+
+        private void btnCitys_Click(object sender, EventArgs e)
+        {
+            new FrmCitys().ShowDialog();
+        }
+
+        private void btnListCity_Click(object sender, EventArgs e)
+        {
+            new frmListCitys().ShowDialog();
+        }
+
+        private void btnMosafer_Click(object sender, EventArgs e)
+        {
+            new frmMosafer().ShowDialog();
+        }
+
+        private void btnListMosafer_Click(object sender, EventArgs e)
+        {
+            new frmListMosafer().ShowDialog();
+        }
+
+        private void btnHavapeyma_Click(object sender, EventArgs e)
+        {
+            new frmHavapeyma().ShowDialog();
+        }
+
+        private void btnListHavapeyma_Click(object sender, EventArgs e)
+        {
+            new frmListHavapeyma().ShowDialog();
         }
     }
 }

@@ -15,8 +15,8 @@ namespace Connection_Class
 	/// </summary>
     public class Connection_Query
     {
-        // string ConnectionString = "Data Source=.;Initial Catalog=Bilit;Integrated Security=True";//method 1
-        string ConnectionString = "server=.;database=Bilit;trusted_connection=true";//method 2
+        // string ConnectionString = "Data Source=.;Initial Catalog=Blit;Integrated Security=True";//method 1
+        string ConnectionString = "server=.;database=Blit;trusted_connection=true";//method 2
         SqlConnection con;
 
         public void OpenConection()
@@ -47,7 +47,7 @@ namespace Connection_Class
         {
             SqlCommand cmd = new SqlCommand(Query_, con);
             cmd.Parameters.Clear();
-            cmd.ExecuteNonQuery();
+            cmd.ExecuteScalar();
             return cmd;
         }
         /// <summary>
@@ -69,7 +69,7 @@ namespace Connection_Class
         /// dataGridView1.datasource = ClassObject.ShowDataInGridView("Select * From Student")
         /// </summary>
 
-        public object ShowDataInGridView(string Query_)
+        public object ShowData(string Query_)
         {
             SqlDataAdapter dr = new SqlDataAdapter(Query_, ConnectionString);
             DataSet ds = new DataSet();

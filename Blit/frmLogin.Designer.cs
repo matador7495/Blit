@@ -42,6 +42,7 @@
             DevComponents.DotNetBar.Controls.ColorData colorData7 = new DevComponents.DotNetBar.Controls.ColorData();
             DevComponents.DotNetBar.Controls.ColorData colorData8 = new DevComponents.DotNetBar.Controls.ColorData();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.analogClockControl1 = new DevComponents.DotNetBar.Controls.AnalogClockControl();
             this.btnExit = new DevComponents.DotNetBar.ButtonX();
             this.btnEnter = new DevComponents.DotNetBar.ButtonX();
             this.txtPassword = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -49,7 +50,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.analogClockControl1 = new DevComponents.DotNetBar.Controls.AnalogClockControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -103,94 +103,9 @@
             this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel1.TabIndex = 0;
             // 
-            // btnExit
-            // 
-            this.btnExit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnExit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Image = global::Blit.Properties.Resources.icons8_exit_42;
-            this.btnExit.Location = new System.Drawing.Point(419, 206);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(91, 43);
-            this.btnExit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnExit.TabIndex = 3;
-            this.btnExit.Text = "خروج";
-            // 
-            // btnEnter
-            // 
-            this.btnEnter.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnEnter.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnEnter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEnter.Image = global::Blit.Properties.Resources.icons8_enter_42;
-            this.btnEnter.Location = new System.Drawing.Point(526, 206);
-            this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(91, 43);
-            this.btnEnter.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnEnter.TabIndex = 2;
-            this.btnEnter.Text = "ورود";
-            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
-            // 
-            // txtPassword
-            // 
-            // 
-            // 
-            // 
-            this.txtPassword.Border.Class = "TextBoxBorder";
-            this.txtPassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtPassword.Location = new System.Drawing.Point(392, 162);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.PreventEnterBeep = true;
-            this.txtPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtPassword.Size = new System.Drawing.Size(248, 30);
-            this.txtPassword.TabIndex = 1;
-            // 
-            // txtUserName
-            // 
-            // 
-            // 
-            // 
-            this.txtUserName.Border.Class = "TextBoxBorder";
-            this.txtUserName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtUserName.Location = new System.Drawing.Point(392, 122);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.PreventEnterBeep = true;
-            this.txtUserName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtUserName.Size = new System.Drawing.Size(248, 30);
-            this.txtUserName.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(644, 164);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 24);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "کلمه عبور : ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(644, 124);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 24);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "نام کاربری : ";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::Blit.Properties.Resources._6605917aa33cd4b6f62f1c89dcc7aeec;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(376, 370);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // analogClockControl1
             // 
-            this.analogClockControl1.ClockStyle = DevComponents.DotNetBar.Controls.eClockStyles.Style2;
+            this.analogClockControl1.ClockStyle = DevComponents.DotNetBar.Controls.eClockStyles.Custom;
             colorData1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             colorData1.BrushAngle = 90F;
             colorData1.BrushSBSScale = 1F;
@@ -265,7 +180,7 @@
             clockStyleData1.SmallTickColor = colorData8;
             clockStyleData1.SmallTickLength = 0.01F;
             clockStyleData1.SmallTickWidth = 0.01F;
-            clockStyleData1.Style = DevComponents.DotNetBar.Controls.eClockStyles.Style2;
+            clockStyleData1.Style = DevComponents.DotNetBar.Controls.eClockStyles.Custom;
             this.analogClockControl1.ClockStyleData = clockStyleData1;
             this.analogClockControl1.IndicatorStyle = DevComponents.DotNetBar.Controls.eClockIndicatorStyles.Numbers;
             this.analogClockControl1.Location = new System.Drawing.Point(5, 230);
@@ -274,6 +189,93 @@
             this.analogClockControl1.TabIndex = 5;
             this.analogClockControl1.TimeZone = "Iran Standard Time";
             this.analogClockControl1.Value = new System.DateTime(2018, 10, 29, 22, 49, 25, 379);
+            // 
+            // btnExit
+            // 
+            this.btnExit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnExit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.Image = global::Blit.Properties.Resources.icons8_exit_42;
+            this.btnExit.Location = new System.Drawing.Point(419, 206);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(91, 43);
+            this.btnExit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "خروج";
+            // 
+            // btnEnter
+            // 
+            this.btnEnter.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnEnter.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnEnter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEnter.Image = global::Blit.Properties.Resources.icons8_enter_42;
+            this.btnEnter.Location = new System.Drawing.Point(526, 206);
+            this.btnEnter.Name = "btnEnter";
+            this.btnEnter.Size = new System.Drawing.Size(91, 43);
+            this.btnEnter.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnEnter.TabIndex = 2;
+            this.btnEnter.Text = "ورود";
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
+            // 
+            // txtPassword
+            // 
+            // 
+            // 
+            // 
+            this.txtPassword.Border.Class = "TextBoxBorder";
+            this.txtPassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtPassword.FocusHighlightEnabled = true;
+            this.txtPassword.Location = new System.Drawing.Point(392, 162);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.PreventEnterBeep = true;
+            this.txtPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtPassword.Size = new System.Drawing.Size(248, 30);
+            this.txtPassword.TabIndex = 1;
+            // 
+            // txtUserName
+            // 
+            // 
+            // 
+            // 
+            this.txtUserName.Border.Class = "TextBoxBorder";
+            this.txtUserName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtUserName.FocusHighlightEnabled = true;
+            this.txtUserName.Location = new System.Drawing.Point(392, 122);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.PreventEnterBeep = true;
+            this.txtUserName.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtUserName.Size = new System.Drawing.Size(248, 30);
+            this.txtUserName.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(644, 164);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 24);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "کلمه عبور : ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(644, 124);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 24);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "نام کاربری : ";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::Blit.Properties.Resources._6605917aa33cd4b6f62f1c89dcc7aeec;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(376, 370);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // timer1
             // 

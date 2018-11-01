@@ -1,15 +1,15 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using ClearClass;
 using Connection_Class;
-using ClearClass;
+using System;
+using System.Windows.Forms;
 
 namespace Blit
 {
-    public partial class frmSetting : DevComponents.DotNetBar.Office2007Form
+    public partial class frmMosafer : DevComponents.DotNetBar.Office2007Form
     {
         Connection_Query query = new Connection_Query();
 
-        public frmSetting()
+        public frmMosafer()
         {
             InitializeComponent();
         }
@@ -19,7 +19,7 @@ namespace Blit
             try
             {
                 query.OpenConection();
-                query.ExecuteQueries(string.Format("Insert into tblsetting values('{0}','{1}','{2}')", txtName.Text, txtTel.Text, txtAddress.Text));
+                query.ExecuteQueries(string.Format("insert into tblMosafer values('{0}','{1}','{2}','{3}','{4}')", txtFName.Text, txtLName.Text, cmbGender.Text, txtSen.Text, txtTel.Text));
                 query.CloseConnection();
                 MessageBox.Show("عملیات با موفقیت انجام شد", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearControls.ClearTextBoxes(this);
@@ -35,7 +35,7 @@ namespace Blit
             try
             {
                 query.OpenConection();
-                query.ExecuteQueries("Delete from tblsetting where ID = " + txtCode.Text);
+                query.ExecuteQueries("delete from tblMosafer where ID=" + txtCode.Text);
                 query.CloseConnection();
                 MessageBox.Show("عملیات با موفقیت انجام شد", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearControls.ClearTextBoxes(this);
@@ -51,7 +51,7 @@ namespace Blit
             try
             {
                 query.OpenConection();
-                query.ExecuteQueries("Update tblsetting set NameAgency='" + txtName.Text + "',TelA='" + txtTel.Text + "',AddressA='" + txtAddress.Text + "'where ID=" + txtCode.Text);
+                query.ExecuteQueries("Update tblMosafer set FName='" + txtFName.Text + "',LName='" + txtLName.Text + "',Gender='" + cmbGender.Text + "',Sen='" + txtSen.Text + "',Tel='" + txtTel.Text + "' where ID=" + txtCode.Text);
                 query.CloseConnection();
                 MessageBox.Show("عملیات با موفقیت انجام شد", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearControls.ClearTextBoxes(this);
@@ -64,17 +64,20 @@ namespace Blit
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+
             try
             {
                 query.OpenConection();
-                var dr = query.DataReader("Select * from tblsetting where id=" + txtCode.Text);
+                var dr = query.DataReader("select * from tblMosafer where ID=" + txtCode.Text);
 
                 if (dr.Read())
                 {
                     txtCode.Text = dr["ID"].ToString();
-                    txtName.Text = dr["NameAgency"].ToString();
-                    txtTel.Text = dr["TelA"].ToString();
-                    txtAddress.Text = dr["AddressA"].ToString();
+                    txtFName.Text = dr["FName"].ToString();
+                    txtLName.Text = dr["LName"].ToString();
+                    cmbGender.Text = dr["Gender"].ToString();
+                    txtSen.Text = dr["Sen"].ToString();
+                    txtTel.Text = dr["Tel"].ToString();
                 }
                 else
                 {

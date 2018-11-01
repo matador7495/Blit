@@ -48,6 +48,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar2, Version=12.8.0.6, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="Stimulsoft.Base, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Learning\C#\Clicksite\آموزش سیستم اتوماسیون اداری با سی شارپ - کلیک سایت - کامل\automation_part108\Stimulsoft.Reports.NET.v2015\DLL\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Learning\C#\Clicksite\آموزش سیستم اتوماسیون اداری با سی شارپ - کلیک سایت - کامل\automation_part108\Stimulsoft.Reports.NET.v2015\DLL\Stimulsoft.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls.Win, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Learning\C#\Clicksite\آموزش سیستم اتوماسیون اداری با سی شارپ - کلیک سایت - کامل\automation_part108\Stimulsoft.Reports.NET.v2015\DLL\Stimulsoft.Controls.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Learning\C#\Clicksite\آموزش سیستم اتوماسیون اداری با سی شارپ - کلیک سایت - کامل\automation_part108\Stimulsoft.Reports.NET.v2015\DLL\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Win, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Learning\C#\Clicksite\آموزش سیستم اتوماسیون اداری با سی شارپ - کلیک سایت - کامل\automation_part108\Stimulsoft.Reports.NET.v2015\DLL\Stimulsoft.Report.Win.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -63,6 +83,42 @@
   <ItemGroup>
     <Compile Include="Class_ClearControls.cs" />
     <Compile Include="Connection_Query.cs" />
+    <Compile Include="FrmCitys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCitys.Designer.cs">
+      <DependentUpon>FrmCitys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGroups.Designer.cs">
+      <DependentUpon>frmGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHavapeyma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHavapeyma.Designer.cs">
+      <DependentUpon>frmHavapeyma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListCitys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListCitys.Designer.cs">
+      <DependentUpon>frmListCitys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListGroups.Designer.cs">
+      <DependentUpon>frmListGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListHavapeyma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListHavapeyma.Designer.cs">
+      <DependentUpon>frmListHavapeyma.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +130,12 @@
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMosafer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMosafer.Designer.cs">
+      <DependentUpon>frmMosafer.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSetting.cs">
       <SubType>Form</SubType>
@@ -87,19 +149,49 @@
     <Compile Include="frmUsers.Designer.cs">
       <DependentUpon>frmUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListMosafer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListMosafer.Designer.cs">
+      <DependentUpon>frmListMosafer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmCitys.resx">
+      <DependentUpon>FrmCitys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGroups.resx">
+      <DependentUpon>frmGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHavapeyma.resx">
+      <DependentUpon>frmHavapeyma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListCitys.resx">
+      <DependentUpon>frmListCitys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListGroups.resx">
+      <DependentUpon>frmListGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListHavapeyma.resx">
+      <DependentUpon>frmListHavapeyma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMosafer.resx">
+      <DependentUpon>frmMosafer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSetting.resx">
       <DependentUpon>frmSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUsers.resx">
       <DependentUpon>frmUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListMosafer.resx">
+      <DependentUpon>frmListMosafer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -162,6 +254,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user-account-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-genealogy-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-skyscrapers-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-todo-list-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-transaction-list-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-print-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-account-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-airport-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-test-passed-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
