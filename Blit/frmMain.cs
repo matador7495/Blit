@@ -101,5 +101,15 @@ namespace Blit
         {
             new frmListHavapeyma().ShowDialog();
         }
+
+        private void btnNooBlit_Click(object sender, EventArgs e)
+        {
+            new frmNooBlit().ShowDialog();
+        }
+
+        private void btnListNooBlit_Click(object sender, EventArgs e)
+        {
+            new frmListNooBlit().ShowDialog();
+        }
     }
 }

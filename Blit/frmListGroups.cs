@@ -28,7 +28,7 @@ namespace Blit
             }
             else
             {
-                MessageBox.Show("اطلاعاتی در بخش تنظیمات ذخیره نشده است", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("در اتصال به پایگاه داده خطایی رخ داده است ، لطفا مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

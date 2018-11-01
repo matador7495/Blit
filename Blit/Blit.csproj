@@ -119,6 +119,12 @@
     <Compile Include="frmListHavapeyma.Designer.cs">
       <DependentUpon>frmListHavapeyma.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListNooBlit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListNooBlit.Designer.cs">
+      <DependentUpon>frmListNooBlit.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,12 @@
     </Compile>
     <Compile Include="frmMosafer.Designer.cs">
       <DependentUpon>frmMosafer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNooBlit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNooBlit.Designer.cs">
+      <DependentUpon>frmNooBlit.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSetting.cs">
       <SubType>Form</SubType>
@@ -175,6 +187,9 @@
     <EmbeddedResource Include="frmListHavapeyma.resx">
       <DependentUpon>frmListHavapeyma.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmListNooBlit.resx">
+      <DependentUpon>frmListNooBlit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMosafer.resx">
       <DependentUpon>frmMosafer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNooBlit.resx">
+      <DependentUpon>frmNooBlit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSetting.resx">
       <DependentUpon>frmSetting.cs</DependentUpon>
@@ -284,6 +302,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-test-passed-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ticket-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-file-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

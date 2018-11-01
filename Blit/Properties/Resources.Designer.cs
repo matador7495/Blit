@@ -123,6 +123,16 @@ namespace Blit.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_file_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-file-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_genealogy_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-genealogy-64", resourceCulture);
@@ -166,6 +176,16 @@ namespace Blit.Properties {
         internal static System.Drawing.Bitmap icons8_test_passed_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-test-passed-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_ticket_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-ticket-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

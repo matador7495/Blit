@@ -32,6 +32,7 @@
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.ribbonControl1 = new DevComponents.DotNetBar.RibbonControl();
             this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
+            this.ribbonBar11 = new DevComponents.DotNetBar.RibbonBar();
             this.ribbonBar10 = new DevComponents.DotNetBar.RibbonBar();
             this.ribbonBar9 = new DevComponents.DotNetBar.RibbonBar();
             this.ribbonBar8 = new DevComponents.DotNetBar.RibbonBar();
@@ -57,6 +58,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ribbonBar12 = new DevComponents.DotNetBar.RibbonBar();
+            this.btnListNooBlit = new DevComponents.DotNetBar.ButtonItem();
+            this.btnNooBlit = new DevComponents.DotNetBar.ButtonItem();
             this.btnListHavapeyma = new DevComponents.DotNetBar.ButtonItem();
             this.btnHavapeyma = new DevComponents.DotNetBar.ButtonItem();
             this.btnListMosafer = new DevComponents.DotNetBar.ButtonItem();
@@ -163,6 +167,8 @@
             // ribbonPanel3
             // 
             this.ribbonPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel3.Controls.Add(this.ribbonBar12);
+            this.ribbonPanel3.Controls.Add(this.ribbonBar11);
             this.ribbonPanel3.Controls.Add(this.ribbonBar10);
             this.ribbonPanel3.Controls.Add(this.ribbonBar9);
             this.ribbonPanel3.Controls.Add(this.ribbonBar8);
@@ -185,6 +191,39 @@
             // 
             this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel3.TabIndex = 3;
+            // 
+            // ribbonBar11
+            // 
+            this.ribbonBar11.AutoOverflowEnabled = true;
+            this.ribbonBar11.AutoSizeIncludesTitle = true;
+            // 
+            // 
+            // 
+            this.ribbonBar11.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar11.ContainerControlProcessDialogKey = true;
+            this.ribbonBar11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ribbonBar11.DragDropSupport = true;
+            this.ribbonBar11.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnNooBlit});
+            this.ribbonBar11.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ribbonBar11.Location = new System.Drawing.Point(403, 0);
+            this.ribbonBar11.Name = "ribbonBar11";
+            this.ribbonBar11.Size = new System.Drawing.Size(100, 85);
+            this.ribbonBar11.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonBar11.TabIndex = 4;
+            this.ribbonBar11.Text = "درجه بندی بلیط";
+            // 
+            // 
+            // 
+            this.ribbonBar11.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar11.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // ribbonBar10
             // 
@@ -713,6 +752,60 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // ribbonBar12
+            // 
+            this.ribbonBar12.AutoOverflowEnabled = false;
+            this.ribbonBar12.AutoSizeIncludesTitle = true;
+            this.ribbonBar12.AutoSizeItems = false;
+            // 
+            // 
+            // 
+            this.ribbonBar12.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar12.ContainerControlProcessDialogKey = true;
+            this.ribbonBar12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ribbonBar12.DragDropSupport = true;
+            this.ribbonBar12.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnListNooBlit});
+            this.ribbonBar12.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ribbonBar12.Location = new System.Drawing.Point(503, 0);
+            this.ribbonBar12.Name = "ribbonBar12";
+            this.ribbonBar12.Size = new System.Drawing.Size(103, 85);
+            this.ribbonBar12.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonBar12.TabIndex = 5;
+            this.ribbonBar12.Text = "لیست درجه بندی";
+            // 
+            // 
+            // 
+            this.ribbonBar12.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar12.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // btnListNooBlit
+            // 
+            this.btnListNooBlit.Image = global::Blit.Properties.Resources.icons8_file_64;
+            this.btnListNooBlit.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
+            this.btnListNooBlit.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnListNooBlit.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
+            this.btnListNooBlit.Name = "btnListNooBlit";
+            this.btnListNooBlit.SubItemsExpandWidth = 14;
+            this.btnListNooBlit.Click += new System.EventHandler(this.btnListNooBlit_Click);
+            // 
+            // btnNooBlit
+            // 
+            this.btnNooBlit.Image = global::Blit.Properties.Resources.icons8_ticket_64;
+            this.btnNooBlit.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
+            this.btnNooBlit.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnNooBlit.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
+            this.btnNooBlit.Name = "btnNooBlit";
+            this.btnNooBlit.SubItemsExpandWidth = 14;
+            this.btnNooBlit.Click += new System.EventHandler(this.btnNooBlit_Click);
+            // 
             // btnListHavapeyma
             // 
             this.btnListHavapeyma.Image = global::Blit.Properties.Resources.icons8_test_passed_64;
@@ -879,6 +972,10 @@
         private DevComponents.DotNetBar.ButtonItem btnListHavapeyma;
         private DevComponents.DotNetBar.RibbonBar ribbonBar9;
         private DevComponents.DotNetBar.ButtonItem btnHavapeyma;
+        private DevComponents.DotNetBar.RibbonBar ribbonBar11;
+        private DevComponents.DotNetBar.ButtonItem btnNooBlit;
+        private DevComponents.DotNetBar.RibbonBar ribbonBar12;
+        private DevComponents.DotNetBar.ButtonItem btnListNooBlit;
     }
 }
 
