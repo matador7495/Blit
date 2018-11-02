@@ -40,7 +40,6 @@ namespace Blit
         private void timer1_Tick(object sender, EventArgs e)
         {
             analogClockControl1.Value = DateTime.Now;
-
         }
     }
 }

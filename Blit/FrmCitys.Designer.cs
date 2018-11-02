@@ -53,7 +53,7 @@
             this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel1.Location = new System.Drawing.Point(0, 0);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(344, 126);
+            this.groupPanel1.Size = new System.Drawing.Size(324, 126);
             // 
             // 
             // 
@@ -95,7 +95,7 @@
             this.groupPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupPanel3.Location = new System.Drawing.Point(0, 80);
             this.groupPanel3.Name = "groupPanel3";
-            this.groupPanel3.Size = new System.Drawing.Size(338, 40);
+            this.groupPanel3.Size = new System.Drawing.Size(318, 40);
             // 
             // 
             // 
@@ -132,7 +132,7 @@
             this.btnDelete.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.Image = global::Blit.Properties.Resources.delete_32;
-            this.btnDelete.Location = new System.Drawing.Point(88, 0);
+            this.btnDelete.Location = new System.Drawing.Point(78, 0);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 34);
             this.btnDelete.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -146,7 +146,7 @@
             this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.Image = global::Blit.Properties.Resources.plus_32;
-            this.btnSave.Location = new System.Drawing.Point(169, 0);
+            this.btnSave.Location = new System.Drawing.Point(159, 0);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 34);
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -167,7 +167,7 @@
             this.groupPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupPanel2.Location = new System.Drawing.Point(0, 0);
             this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(338, 77);
+            this.groupPanel2.Size = new System.Drawing.Size(318, 77);
             // 
             // 
             // 
@@ -206,7 +206,7 @@
             this.txtName.Border.Class = "TextBoxBorder";
             this.txtName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtName.FocusHighlightEnabled = true;
-            this.txtName.Location = new System.Drawing.Point(9, 38);
+            this.txtName.Location = new System.Drawing.Point(5, 38);
             this.txtName.Name = "txtName";
             this.txtName.PreventEnterBeep = true;
             this.txtName.Size = new System.Drawing.Size(250, 30);
@@ -220,7 +220,7 @@
             this.txtCode.Border.Class = "TextBoxBorder";
             this.txtCode.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtCode.FocusHighlightEnabled = true;
-            this.txtCode.Location = new System.Drawing.Point(9, 2);
+            this.txtCode.Location = new System.Drawing.Point(5, 2);
             this.txtCode.Name = "txtCode";
             this.txtCode.PreventEnterBeep = true;
             this.txtCode.Size = new System.Drawing.Size(250, 30);
@@ -229,26 +229,26 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(262, 44);
+            this.label2.Location = new System.Drawing.Point(257, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 24);
+            this.label2.Size = new System.Drawing.Size(50, 24);
             this.label2.TabIndex = 0;
-            this.label2.Text = "نام شهر : ";
+            this.label2.Text = "نام شهر";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(262, 4);
+            this.label1.Location = new System.Drawing.Point(257, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 24);
+            this.label1.Size = new System.Drawing.Size(47, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "کد شهر : ";
+            this.label1.Text = "کد شهر";
             // 
             // FrmCitys
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(344, 126);
+            this.ClientSize = new System.Drawing.Size(324, 126);
             this.Controls.Add(this.groupPanel1);
             this.DoubleBuffered = true;
             this.EnableGlass = false;

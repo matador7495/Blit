@@ -13,14 +13,13 @@ namespace Blit
         {
             InitializeComponent();
         }
-        
+
         private void btnSave_Click(object sender, EventArgs e)
         {
+            query.OpenConection();
             try
             {
-                query.OpenConection();
                 query.ExecuteQueries(string.Format("insert into tblGroups values('{0}')", txtName.Text));
-                query.CloseConnection();
                 MessageBox.Show("عملیات با موفقیت انجام شد", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearControls.ClearTextBoxes(this);
             }
@@ -28,15 +27,15 @@ namespace Blit
             {
                 MessageBox.Show("خطایی رخ داده است، مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            query.CloseConnection();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            query.OpenConection();
             try
             {
-                query.OpenConection();
                 query.ExecuteQueries("delete from tblGroups where ID=" + txtCode.Text);
-                query.CloseConnection();
                 MessageBox.Show("عملیات با موفقیت انجام شد", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearControls.ClearTextBoxes(this);
             }
@@ -44,6 +43,7 @@ namespace Blit
             {
                 MessageBox.Show("خطایی رخ داده است، مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            query.CloseConnection();
         }
     }
 }

@@ -16,11 +16,10 @@ namespace Blit
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            query.OpenConection();
             try
             {
-                query.OpenConection();
                 query.ExecuteQueries(string.Format("insert into tblMosafer values('{0}','{1}','{2}','{3}','{4}')", txtFName.Text, txtLName.Text, cmbGender.Text, txtSen.Text, txtTel.Text));
-                query.CloseConnection();
                 MessageBox.Show("عملیات با موفقیت انجام شد", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearControls.ClearTextBoxes(this);
             }
@@ -28,15 +27,15 @@ namespace Blit
             {
                 MessageBox.Show("خطایی رخ داده است، مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            query.CloseConnection();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            query.OpenConection();
             try
             {
-                query.OpenConection();
                 query.ExecuteQueries("delete from tblMosafer where ID=" + txtCode.Text);
-                query.CloseConnection();
                 MessageBox.Show("عملیات با موفقیت انجام شد", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearControls.ClearTextBoxes(this);
             }
@@ -44,15 +43,15 @@ namespace Blit
             {
                 MessageBox.Show("خطایی رخ داده است، مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            query.CloseConnection();
         }
 
         private void btn_Edit_Click(object sender, EventArgs e)
         {
+            query.OpenConection();
             try
             {
-                query.OpenConection();
                 query.ExecuteQueries("Update tblMosafer set FName='" + txtFName.Text + "',LName='" + txtLName.Text + "',Gender='" + cmbGender.Text + "',Sen='" + txtSen.Text + "',Tel='" + txtTel.Text + "' where ID=" + txtCode.Text);
-                query.CloseConnection();
                 MessageBox.Show("عملیات با موفقیت انجام شد", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearControls.ClearTextBoxes(this);
             }
@@ -60,14 +59,14 @@ namespace Blit
             {
                 MessageBox.Show("خطایی رخ داده است، مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            query.CloseConnection();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-
+            query.OpenConection();
             try
             {
-                query.OpenConection();
                 var dr = query.DataReader("select * from tblMosafer where ID=" + txtCode.Text);
 
                 if (dr.Read())
@@ -85,12 +84,12 @@ namespace Blit
                     ClearControls.ClearTextBoxes(this);
                     txtCode.Focus();
                 }
-                query.CloseConnection();
             }
             catch (Exception)
             {
-                MessageBox.Show("خطایی رخ داده است، مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("در هنگام اتصال به بانک اطلاعاتی خطایی رخ داده است ، مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            query.CloseConnection();
         }
     }
 }

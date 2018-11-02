@@ -15,11 +15,10 @@ namespace Blit
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            query.OpenConection();
             try
             {
-                query.OpenConection();
                 query.ExecuteQueries(string.Format("insert into tblHavapeyma values('{0}','{1}','{2}','{3}')", txtName.Text, cmbGroup.Text, txtTedad.Text, txtTozihat.Text));
-                query.CloseConnection();
                 MessageBox.Show("عملیات با موفقیت انجام شد", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearControls.ClearTextBoxes(this);
             }
@@ -27,13 +26,14 @@ namespace Blit
             {
                 MessageBox.Show("خطایی رخ داده است، مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            query.CloseConnection();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            query.OpenConection();
             try
             {
-                query.OpenConection();
                 var dr = query.DataReader("select * from tblHavapeyma where id=" + txtCode.Text);
                 if (dr.Read())
                 {
@@ -49,28 +49,33 @@ namespace Blit
                     ClearControls.ClearTextBoxes(this);
                     txtCode.Focus();
                 }
-                query.CloseConnection();
             }
             catch (Exception)
             {
-                MessageBox.Show("خطایی رخ داده است، مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("در هنگام اتصال به بانک اطلاعاتی خطایی رخ داده است ، مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            query.CloseConnection();
         }
 
         private void frmHavapeyma_Load(object sender, EventArgs e)
         {
-            query.OpenConection();
-            cmbGroup.DataSource = query.ShowData("select NameG from tblGroups");
-            cmbGroup.DisplayMember = "NameG";//namayesh barasase col NameGroup
+            try
+            {
+                cmbGroup.DataSource = query.ShowData("select NameG from tblGroups");
+                cmbGroup.DisplayMember = "NameG";//namayesh barasase col NameGroup
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("در هنگام اتصال به بانک اطلاعاتی خطایی رخ داده است ، مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            query.OpenConection();
             try
             {
-                query.OpenConection();
                 query.ExecuteQueries("delete from tblHavapeyma where id=" + txtCode.Text);
-                query.CloseConnection();
                 MessageBox.Show("عملیات با موفقیت انجام شد", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearControls.ClearTextBoxes(this);
             }
@@ -78,15 +83,15 @@ namespace Blit
             {
                 MessageBox.Show("خطایی رخ داده است، مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            query.CloseConnection();
         }
 
         private void btn_Edit_Click(object sender, EventArgs e)
         {
+            query.OpenConection();
             try
             {
-                query.OpenConection();
                 query.ExecuteQueries("update tblHavapeyma set NameHavapeyma='" + txtName.Text + "',NameGroup='" + cmbGroup.Text + "',Tedad='" + txtTedad.Text + "',Tozihat='" + txtTozihat.Text + "' where id=" + txtCode.Text);
-                query.CloseConnection();
                 MessageBox.Show("عملیات با موفقیت انجام شد", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearControls.ClearTextBoxes(this);
             }
@@ -94,6 +99,7 @@ namespace Blit
             {
                 MessageBox.Show("خطایی رخ داده است، مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            query.CloseConnection();
         }
     }
 }

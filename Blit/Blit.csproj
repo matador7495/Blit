@@ -83,6 +83,12 @@
   <ItemGroup>
     <Compile Include="Class_ClearControls.cs" />
     <Compile Include="Connection_Query.cs" />
+    <Compile Include="frmBlit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBlit.Designer.cs">
+      <DependentUpon>frmBlit.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCitys.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,12 @@
     </Compile>
     <Compile Include="frmHavapeyma.Designer.cs">
       <DependentUpon>frmHavapeyma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHesab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHesab.Designer.cs">
+      <DependentUpon>frmHesab.cs</DependentUpon>
     </Compile>
     <Compile Include="frmListCitys.cs">
       <SubType>Form</SubType>
@@ -169,6 +181,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBlit.resx">
+      <DependentUpon>frmBlit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCitys.resx">
       <DependentUpon>FrmCitys.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHavapeyma.resx">
       <DependentUpon>frmHavapeyma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHesab.resx">
+      <DependentUpon>frmHesab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListCitys.resx">
       <DependentUpon>frmListCitys.cs</DependentUpon>
@@ -308,6 +326,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-file-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-receipt-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-file-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-available-updates-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pos-terminal-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

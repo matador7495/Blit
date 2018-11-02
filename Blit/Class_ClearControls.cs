@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
+using DevComponents;
+using DevComponents.Editors;
+using DevComponents.DotNetBar.Controls;
 
 namespace ClearClass
 {
@@ -8,7 +11,7 @@ namespace ClearClass
         /// <summary>
         /// ///پاک کردن تمام تکس باکس در هر جای فرم
         /// </summary>
-   
+
         public static void ClearTextBoxes(Control texbox)
         {
             Action<Control.ControlCollection> func = null;
@@ -16,10 +19,26 @@ namespace ClearClass
             func = (controls) =>
             {
                 foreach (Control control in controls)
+                {
                     if (control is TextBox)
+                    {
                         (control as TextBox).Clear();
+                    }
+                    if (control is ComboBoxEx)
+                    {
+                        (control as ComboBoxEx).Text = "";
+
+                    }
+                    if (control is IntegerInput)
+                    {
+                        (control as IntegerInput).Text = "";
+                    }
                     else
+                    {
                         func(control.Controls);
+                    }
+                }
+
             };
             func(texbox.Controls);
         }
@@ -30,7 +49,7 @@ namespace ClearClass
         /// (اسم اون کنترل)
         /// میتونیم راحت هرکدام رو خواستیم پاک کنیم
         /// </summary>
-       
+
         public static void clearalltextbox(Control parent)
         {
             foreach (Control c in parent.Controls)
@@ -46,7 +65,7 @@ namespace ClearClass
         /// پاک کردن تمام اشیا رو یک فرم
         /// فقط شامل کنترل های روی فرم میشه
         /// </summary>
-       
+
         public static void ClearFormControls(Form form)
         {
             foreach (Control control in form.Controls)

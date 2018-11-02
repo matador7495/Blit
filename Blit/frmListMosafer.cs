@@ -17,14 +17,21 @@ namespace Blit
         void Display()
         {
             query.OpenConection();
-            dgvListMosafer.DataSource = query.ShowData("select * from tblMosafer");
-
-            var dr = query.DataReader("select NameAgency from tblSetting");
-            if (dr.Read())
+            try
             {
-                NameAgency = dr["NameAgency"].ToString();
+                dgvListMosafer.DataSource = query.ShowData("select * from tblMosafer");
+
+                var dr = query.DataReader("select NameAgency from tblSetting");
+                if (dr.Read())
+                {
+                    NameAgency = dr["NameAgency"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("خطایی رخ داده است، مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch (Exception)
             {
                 MessageBox.Show("در اتصال به پایگاه داده خطایی رخ داده است ، لطفا مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -33,7 +40,14 @@ namespace Blit
         void Search()
         {
             query.OpenConection();
-            dgvListMosafer.DataSource = query.ShowData(string.Format("select * from tblMosafer where FName like '%' + '{0}' + '%' AND LName like '%' + '{1}' + '%'  ", txtFName.Text, txtLName.Text));
+            try
+            {
+                dgvListMosafer.DataSource = query.ShowData(string.Format("select * from tblMosafer where FName like '%' + '{0}' + '%' AND LName like '%' + '{1}' + '%'  ", txtFName.Text, txtLName.Text));
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("در اتصال به پایگاه داده خطایی رخ داده است ، لطفا مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             query.CloseConnection();
         }
         private void ListMosafer_Load(object sender, EventArgs e)
@@ -70,12 +84,11 @@ namespace Blit
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            query.OpenConection();
             try
             {
                 int x = Convert.ToInt32(dgvListMosafer.SelectedCells[0].Value);
-                query.OpenConection();
                 query.ExecuteQueries("delete from tblMosafer where id=" + x);
-                query.CloseConnection();
                 MessageBox.Show("عملیات با موفقیت انجام شد", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Display();
             }
@@ -83,6 +96,7 @@ namespace Blit
             {
                 MessageBox.Show("خطایی رخ داده است، مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            query.CloseConnection();
         }
     }
 }

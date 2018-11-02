@@ -103,6 +103,16 @@ namespace Blit.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_available_updates_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-available-updates-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_enter_42 {
             get {
                 object obj = ResourceManager.GetObject("icons8-enter-42", resourceCulture);
@@ -133,6 +143,16 @@ namespace Blit.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_file_641 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-file-641", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_genealogy_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-genealogy-64", resourceCulture);
@@ -143,9 +163,29 @@ namespace Blit.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_pos_terminal_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-pos-terminal-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_print_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-print-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_receipt_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-receipt-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

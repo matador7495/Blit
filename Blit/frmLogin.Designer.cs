@@ -251,20 +251,20 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(644, 164);
+            this.label3.Location = new System.Drawing.Point(642, 165);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 24);
+            this.label3.Size = new System.Drawing.Size(58, 24);
             this.label3.TabIndex = 3;
-            this.label3.Text = "کلمه عبور : ";
+            this.label3.Text = "کلمه عبور";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(644, 124);
+            this.label2.Location = new System.Drawing.Point(642, 125);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 24);
+            this.label2.Size = new System.Drawing.Size(62, 24);
             this.label2.TabIndex = 4;
-            this.label2.Text = "نام کاربری : ";
+            this.label2.Text = "نام کاربری";
             // 
             // pictureBox1
             // 

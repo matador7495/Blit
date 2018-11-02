@@ -111,5 +111,15 @@ namespace Blit
         {
             new frmListNooBlit().ShowDialog();
         }
+
+        private void btnBlit_Click(object sender, EventArgs e)
+        {
+            new frmBlit().ShowDialog();
+        }
+
+        private void btnHesab_Click(object sender, EventArgs e)
+        {
+            new frmHesab().ShowDialog();
+        }
     }
 }

@@ -14,21 +14,28 @@ namespace Blit
         }
         public void Display()
         {
+            query.OpenConection();
             try
             {
-                query.OpenConection();
                 dgvListNooBlit.DataSource = query.ShowData("select * from tblNooBlit");
-                query.CloseConnection();
             }
             catch (Exception)
             {
                 MessageBox.Show("در اتصال به پایگاه داده خطایی رخ داده است ، لطفا مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            query.CloseConnection();
         }
         public void Search()
         {
             query.OpenConection();
-            dgvListNooBlit.DataSource = query.ShowData(string.Format("select * from tblNooBlit where NooBlit like '%' + '{0}' + '%' AND NameCity like '%' + '{1}' + '%' ", txtNooBlit.Text, txtNameCity.Text));
+            try
+            {
+                dgvListNooBlit.DataSource = query.ShowData(string.Format("select * from tblNooBlit where NooBlit like '%' + '{0}' + '%' AND NameCity like '%' + '{1}' + '%' ", txtNooBlit.Text, txtNameCity.Text));
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("در اتصال به پایگاه داده خطایی رخ داده است ، لطفا مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             query.CloseConnection();
         }
 
@@ -49,12 +56,11 @@ namespace Blit
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            query.OpenConection();
             try
             {
                 int x = Convert.ToInt32(dgvListNooBlit.SelectedCells[0].Value);
-                query.OpenConection();
                 query.ExecuteQueries("delete from tblNooBlit where id=" + x);
-                query.CloseConnection();
                 MessageBox.Show("عملیات با موفقیت انجام شد", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Display();
             }
@@ -62,6 +68,7 @@ namespace Blit
             {
                 MessageBox.Show("خطایی رخ داده است، مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            query.CloseConnection();
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
