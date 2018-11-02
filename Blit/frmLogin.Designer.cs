@@ -269,7 +269,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::Blit.Properties.Resources._6605917aa33cd4b6f62f1c89dcc7aeec;
+            this.pictureBox1.Image = global::Blit.Properties.Resources.LogoLogin;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(376, 370);

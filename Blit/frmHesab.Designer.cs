@@ -34,6 +34,11 @@
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.dgvHesab = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameHesab = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShomareHesab = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mojodi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tozihat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.txtShomareHesab = new DevComponents.Editors.IntegerInput();
@@ -50,11 +55,6 @@
             this.btnDelete = new DevComponents.DotNetBar.ButtonX();
             this.btnSave = new DevComponents.DotNetBar.ButtonX();
             this.btnSearch = new DevComponents.DotNetBar.ButtonX();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameHesab = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShomareHesab = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mojodi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tozihat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupPanel1.SuspendLayout();
             this.groupPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHesab)).BeginInit();
@@ -173,7 +173,7 @@
             dataGridViewCellStyle2.Font = new System.Drawing.Font("IRANSans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvHesab.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHesab.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -194,6 +194,45 @@
             this.dgvHesab.Size = new System.Drawing.Size(584, 194);
             this.dgvHesab.TabIndex = 0;
             this.dgvHesab.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dgvHesab_MouseUp);
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "کد";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 50;
+            // 
+            // NameHesab
+            // 
+            this.NameHesab.DataPropertyName = "NameHesab";
+            this.NameHesab.HeaderText = "نام حساب";
+            this.NameHesab.Name = "NameHesab";
+            this.NameHesab.ReadOnly = true;
+            this.NameHesab.Width = 130;
+            // 
+            // ShomareHesab
+            // 
+            this.ShomareHesab.DataPropertyName = "ShomareHesab";
+            this.ShomareHesab.HeaderText = "شماره حساب";
+            this.ShomareHesab.Name = "ShomareHesab";
+            this.ShomareHesab.ReadOnly = true;
+            this.ShomareHesab.Width = 130;
+            // 
+            // Mojodi
+            // 
+            this.Mojodi.DataPropertyName = "Mojodi";
+            this.Mojodi.HeaderText = "موجودی";
+            this.Mojodi.Name = "Mojodi";
+            this.Mojodi.ReadOnly = true;
+            // 
+            // Tozihat
+            // 
+            this.Tozihat.DataPropertyName = "Tozihat";
+            this.Tozihat.HeaderText = "توضیحات";
+            this.Tozihat.Name = "Tozihat";
+            this.Tozihat.ReadOnly = true;
+            this.Tozihat.Width = 130;
             // 
             // groupPanel3
             // 
@@ -461,45 +500,6 @@
             this.btnSearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "کد";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 50;
-            // 
-            // NameHesab
-            // 
-            this.NameHesab.DataPropertyName = "NameHesab";
-            this.NameHesab.HeaderText = "نام حساب";
-            this.NameHesab.Name = "NameHesab";
-            this.NameHesab.ReadOnly = true;
-            this.NameHesab.Width = 130;
-            // 
-            // ShomareHesab
-            // 
-            this.ShomareHesab.DataPropertyName = "ShomareHesab";
-            this.ShomareHesab.HeaderText = "شماره حساب";
-            this.ShomareHesab.Name = "ShomareHesab";
-            this.ShomareHesab.ReadOnly = true;
-            this.ShomareHesab.Width = 130;
-            // 
-            // Mojodi
-            // 
-            this.Mojodi.DataPropertyName = "Mojodi";
-            this.Mojodi.HeaderText = "موجودی";
-            this.Mojodi.Name = "Mojodi";
-            this.Mojodi.ReadOnly = true;
-            // 
-            // Tozihat
-            // 
-            this.Tozihat.DataPropertyName = "Tozihat";
-            this.Tozihat.HeaderText = "توضیحات";
-            this.Tozihat.Name = "Tozihat";
-            this.Tozihat.ReadOnly = true;
-            this.Tozihat.Width = 130;
             // 
             // frmHesab
             // 

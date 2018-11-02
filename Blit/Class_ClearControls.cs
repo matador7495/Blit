@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using DevComponents;
 using DevComponents.Editors;
 using DevComponents.DotNetBar.Controls;
 
@@ -27,7 +26,6 @@ namespace ClearClass
                     if (control is ComboBoxEx)
                     {
                         (control as ComboBoxEx).Text = "";
-
                     }
                     if (control is IntegerInput)
                     {
@@ -38,7 +36,6 @@ namespace ClearClass
                         func(control.Controls);
                     }
                 }
-
             };
             func(texbox.Controls);
         }

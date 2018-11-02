@@ -277,7 +277,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\6605917aa33cd4b6f62f1c89dcc7aeec.png" />
+    <None Include="Resources\LogoLogin.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-enter-42.png" />

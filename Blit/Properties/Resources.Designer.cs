@@ -63,16 +63,6 @@ namespace Blit.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _6605917aa33cd4b6f62f1c89dcc7aeec {
-            get {
-                object obj = ResourceManager.GetObject("6605917aa33cd4b6f62f1c89dcc7aeec", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap delete_32 {
             get {
                 object obj = ResourceManager.GetObject("delete-32", resourceCulture);
@@ -266,6 +256,16 @@ namespace Blit.Properties {
         internal static System.Drawing.Bitmap icons8_user_account_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-user-account-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogoLogin {
+            get {
+                object obj = ResourceManager.GetObject("LogoLogin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
