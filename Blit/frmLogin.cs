@@ -23,7 +23,6 @@ namespace Blit
                 i = (int)qe.ExecuteScalar();//chon dar database taghiri eijad nemishe
                 if (i > 0)
                 {
-                    new frmMain().ShowDialog();
                     this.Close();
                 }
                 else
@@ -40,6 +39,11 @@ namespace Blit
         private void timer1_Tick(object sender, EventArgs e)
         {
             analogClockControl1.Value = DateTime.Now;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

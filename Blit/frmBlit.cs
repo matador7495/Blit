@@ -2,15 +2,41 @@
 using Connection_Class;
 using System;
 using System.Windows.Forms;
+using Stimulsoft.Report;
 
 namespace Blit
 {
     public partial class frmBlit : DevComponents.DotNetBar.Office2007Form
     {
         Connection_Query query = new Connection_Query();
+        string NameAgency, TelA, AddressA;
+
         public frmBlit()
         {
             InitializeComponent();
+        }
+        void Display()
+        {
+            query.OpenConection();
+            try
+            {
+                var dr = query.DataReader("select * from tblSetting");
+                if (dr.Read())
+                {
+                    NameAgency = dr["NameAgency"].ToString();
+                    TelA = dr["TelA"].ToString();
+                    AddressA = dr["AddressA"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("خطایی رخ داده است، مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("در اتصال به پایگاه داده خطایی رخ داده است ، لطفا مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
+}
+            query.CloseConnection();
         }
 
         private void btnSearchHavapeyma_Click(object sender, EventArgs e)
@@ -95,11 +121,15 @@ namespace Blit
 
         private void frmBlit_Load(object sender, EventArgs e)
         {
+            Display();
             //sakht shey az PersianCalendar
             System.Globalization.PersianCalendar p = new System.Globalization.PersianCalendar();
             //meghdar dehi date tavasot P , agar month yekraghmi bod yek 0 gharar bde
             mskTarikh.Text = p.GetYear(DateTime.Now).ToString() + p.GetMonth(DateTime.Now).ToString("0#") + p.GetDayOfMonth(DateTime.Now).ToString("0#");
-
+       
+            cmbShomareHesab.DataSource = query.ShowData("SELECT Convert (nvarchar(50),ShomareHesab)  + ' - ' + NameHesab  AS Hesab ,ShomareHesab AS shomare_h FROM tblHesab");
+            cmbShomareHesab.DisplayMember = "Hesab";
+            cmbShomareHesab.ValueMember = "shomare_h";
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -116,7 +146,7 @@ namespace Blit
                 int tedad_sandali;
                 int tedad_blit;
                 var q = query.ExecuteScaler("select Tedad from tblHavapeyma where ID=" + txtCodeHavapeyma.Text);
-                tedad_sandali = Convert.ToInt32((int)q.ExecuteScalar());
+                tedad_sandali = (int)q.ExecuteScalar();
                 tedad_blit = Convert.ToInt32(txtTedadBlit.Text);
                 if (tedad_blit > tedad_sandali)
                 {
@@ -208,6 +238,26 @@ namespace Blit
             query.CloseConnection();
         }
 
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                StiReport report = new StiReport();
+                report.Load("Report/rptBlit.mrt");
+                report.Compile();
+                report["Code"] =Convert.ToInt32( txtCode.Text);
+                report["strNameAgency"] = NameAgency;
+                report["strAddressA"] = AddressA;
+                report["strTelA"] = TelA;
+
+                report.ShowWithRibbonGUI();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("در هنگام گزارش گیری خطایی رخ داده است لطفا مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void btnReload_Click(object sender, EventArgs e)
         {
             int gheymat, tedad_blit, sum = 0;
@@ -216,6 +266,29 @@ namespace Blit
             tedad_blit = Convert.ToInt32(txtTedadBlit.Text);
             sum = gheymat * tedad_blit;
             txtGheymatKol.Text = sum.ToString();
+        }
+
+        private void btnPardakht_Click(object sender, EventArgs e)
+        {
+            query.OpenConection();
+            try
+            {
+                int mojodi_hesab;
+                int mablagh_kol;
+                var q = query.ExecuteScaler("select Mojodi from tblHesab where ShomareHesab=" + cmbShomareHesab.SelectedValue.ToString());
+                mojodi_hesab = ((int)q.ExecuteScalar());
+                mablagh_kol = Convert.ToInt32(txtGheymatKol.Text);
+                int variz = mojodi_hesab + mablagh_kol;
+                query.ExecuteQueries("update tblHesab set Mojodi=" + variz + " where ShomareHesab=" + cmbShomareHesab.SelectedValue.ToString());
+                MessageBox.Show("عملیات با موفقیت انجام شد", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearControls.ClearTextBoxes(this);
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("خطایی رخ داده است، مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            query.CloseConnection();
         }
     }
 }

@@ -101,6 +101,12 @@
     <Compile Include="frmGroups.Designer.cs">
       <DependentUpon>frmGroups.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHarekat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHarekat.Designer.cs">
+      <DependentUpon>frmHarekat.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHavapeyma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,12 @@
     <Compile Include="frmHesab.Designer.cs">
       <DependentUpon>frmHesab.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListBlit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListBlit.Designer.cs">
+      <DependentUpon>frmListBlit.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListCitys.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +136,12 @@
     </Compile>
     <Compile Include="frmListGroups.Designer.cs">
       <DependentUpon>frmListGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListHarekat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListHarekat.Designer.cs">
+      <DependentUpon>frmListHarekat.cs</DependentUpon>
     </Compile>
     <Compile Include="frmListHavapeyma.cs">
       <SubType>Form</SubType>
@@ -161,6 +179,12 @@
     <Compile Include="frmNooBlit.Designer.cs">
       <DependentUpon>frmNooBlit.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReportHavapeyma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportHavapeyma.Designer.cs">
+      <DependentUpon>frmReportHavapeyma.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSetting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,17 +214,26 @@
     <EmbeddedResource Include="frmGroups.resx">
       <DependentUpon>frmGroups.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmHarekat.resx">
+      <DependentUpon>frmHarekat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHavapeyma.resx">
       <DependentUpon>frmHavapeyma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHesab.resx">
       <DependentUpon>frmHesab.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmListBlit.resx">
+      <DependentUpon>frmListBlit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmListCitys.resx">
       <DependentUpon>frmListCitys.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListGroups.resx">
       <DependentUpon>frmListGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListHarekat.resx">
+      <DependentUpon>frmListHarekat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListHavapeyma.resx">
       <DependentUpon>frmListHavapeyma.cs</DependentUpon>
@@ -219,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNooBlit.resx">
       <DependentUpon>frmNooBlit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportHavapeyma.resx">
+      <DependentUpon>frmReportHavapeyma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSetting.resx">
       <DependentUpon>frmSetting.cs</DependentUpon>
@@ -338,6 +374,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-pos-terminal-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cash-register-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-google-calendar-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-align-bottom-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

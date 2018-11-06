@@ -32,11 +32,12 @@
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.ribbonControl1 = new DevComponents.DotNetBar.RibbonControl();
             this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
+            this.ribbonBar17 = new DevComponents.DotNetBar.RibbonBar();
             this.ribbonBar15 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem4 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar14 = new DevComponents.DotNetBar.RibbonBar();
             this.ribbonBar13 = new DevComponents.DotNetBar.RibbonBar();
             this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
+            this.ribbonBar16 = new DevComponents.DotNetBar.RibbonBar();
             this.ribbonBar12 = new DevComponents.DotNetBar.RibbonBar();
             this.ribbonBar11 = new DevComponents.DotNetBar.RibbonBar();
             this.ribbonBar10 = new DevComponents.DotNetBar.RibbonBar();
@@ -65,7 +66,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.ribbonBar16 = new DevComponents.DotNetBar.RibbonBar();
+            this.ribbonTabItem5 = new DevComponents.DotNetBar.RibbonTabItem();
+            this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
+            this.ribbonBar18 = new DevComponents.DotNetBar.RibbonBar();
+            this.btnReportHavapeyma = new DevComponents.DotNetBar.ButtonItem();
+            this.btnListHarekat = new DevComponents.DotNetBar.ButtonItem();
+            this.btnHarekat = new DevComponents.DotNetBar.ButtonItem();
+            this.btnListBlit = new DevComponents.DotNetBar.ButtonItem();
+            this.btnBlit = new DevComponents.DotNetBar.ButtonItem();
             this.btnHesab = new DevComponents.DotNetBar.ButtonItem();
             this.btnListNooBlit = new DevComponents.DotNetBar.ButtonItem();
             this.btnNooBlit = new DevComponents.DotNetBar.ButtonItem();
@@ -73,8 +81,6 @@
             this.btnHavapeyma = new DevComponents.DotNetBar.ButtonItem();
             this.btnListMosafer = new DevComponents.DotNetBar.ButtonItem();
             this.btnMosafer = new DevComponents.DotNetBar.ButtonItem();
-            this.btnListBlit = new DevComponents.DotNetBar.ButtonItem();
-            this.btnBlit = new DevComponents.DotNetBar.ButtonItem();
             this.btnListCity = new DevComponents.DotNetBar.ButtonItem();
             this.btnListGroups = new DevComponents.DotNetBar.ButtonItem();
             this.btnCitys = new DevComponents.DotNetBar.ButtonItem();
@@ -88,6 +94,7 @@
             this.ribbonPanel2.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
+            this.ribbonPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupPanel1
@@ -140,8 +147,9 @@
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.CanCustomize = false;
             this.ribbonControl1.CaptionVisible = true;
-            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel5);
             this.ribbonControl1.Controls.Add(this.ribbonPanel4);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -149,7 +157,8 @@
             this.ribbonTabItem1,
             this.ribbonTabItem2,
             this.ribbonTabItem3,
-            this.ribbonTabItem4});
+            this.ribbonTabItem4,
+            this.ribbonTabItem5});
             this.ribbonControl1.KeyTipsFont = new System.Drawing.Font("Tahoma", 7F);
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Name = "ribbonControl1";
@@ -180,6 +189,7 @@
             // ribbonPanel4
             // 
             this.ribbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel4.Controls.Add(this.ribbonBar17);
             this.ribbonPanel4.Controls.Add(this.ribbonBar15);
             this.ribbonPanel4.Controls.Add(this.ribbonBar14);
             this.ribbonPanel4.Controls.Add(this.ribbonBar13);
@@ -203,6 +213,39 @@
             this.ribbonPanel4.TabIndex = 4;
             this.ribbonPanel4.Visible = false;
             // 
+            // ribbonBar17
+            // 
+            this.ribbonBar17.AutoOverflowEnabled = true;
+            this.ribbonBar17.AutoSizeIncludesTitle = true;
+            // 
+            // 
+            // 
+            this.ribbonBar17.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar17.ContainerControlProcessDialogKey = true;
+            this.ribbonBar17.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ribbonBar17.DragDropSupport = true;
+            this.ribbonBar17.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnListHarekat});
+            this.ribbonBar17.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ribbonBar17.Location = new System.Drawing.Point(303, 0);
+            this.ribbonBar17.Name = "ribbonBar17";
+            this.ribbonBar17.Size = new System.Drawing.Size(100, 148);
+            this.ribbonBar17.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonBar17.TabIndex = 3;
+            this.ribbonBar17.Text = "لیست حرکت ها";
+            // 
+            // 
+            // 
+            this.ribbonBar17.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar17.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
             // ribbonBar15
             // 
             this.ribbonBar15.AutoOverflowEnabled = true;
@@ -219,14 +262,14 @@
             this.ribbonBar15.Dock = System.Windows.Forms.DockStyle.Left;
             this.ribbonBar15.DragDropSupport = true;
             this.ribbonBar15.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem4});
+            this.btnHarekat});
             this.ribbonBar15.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.ribbonBar15.Location = new System.Drawing.Point(203, 0);
             this.ribbonBar15.Name = "ribbonBar15";
             this.ribbonBar15.Size = new System.Drawing.Size(100, 148);
             this.ribbonBar15.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar15.TabIndex = 2;
-            this.ribbonBar15.Text = "ribbonBar15";
+            this.ribbonBar15.Text = "مشخصات حرکت";
             // 
             // 
             // 
@@ -235,12 +278,6 @@
             // 
             // 
             this.ribbonBar15.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // buttonItem4
-            // 
-            this.buttonItem4.Name = "buttonItem4";
-            this.buttonItem4.SubItemsExpandWidth = 14;
-            this.buttonItem4.Text = "buttonItem4";
             // 
             // ribbonBar14
             // 
@@ -336,6 +373,40 @@
             // 
             this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel3.TabIndex = 3;
+            this.ribbonPanel3.Visible = false;
+            // 
+            // ribbonBar16
+            // 
+            this.ribbonBar16.AutoOverflowEnabled = true;
+            this.ribbonBar16.AutoSizeIncludesTitle = true;
+            // 
+            // 
+            // 
+            this.ribbonBar16.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar16.ContainerControlProcessDialogKey = true;
+            this.ribbonBar16.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ribbonBar16.DragDropSupport = true;
+            this.ribbonBar16.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnHesab});
+            this.ribbonBar16.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ribbonBar16.Location = new System.Drawing.Point(606, 0);
+            this.ribbonBar16.Name = "ribbonBar16";
+            this.ribbonBar16.Size = new System.Drawing.Size(100, 85);
+            this.ribbonBar16.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonBar16.TabIndex = 6;
+            this.ribbonBar16.Text = "تعریف حساب";
+            // 
+            // 
+            // 
+            this.ribbonBar16.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar16.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // ribbonBar12
             // 
@@ -810,7 +881,6 @@
             // 
             // ribbonTabItem3
             // 
-            this.ribbonTabItem3.Checked = true;
             this.ribbonTabItem3.Name = "ribbonTabItem3";
             this.ribbonTabItem3.Panel = this.ribbonPanel3;
             this.ribbonTabItem3.Text = "تعریفات";
@@ -819,7 +889,7 @@
             // 
             this.ribbonTabItem4.Name = "ribbonTabItem4";
             this.ribbonTabItem4.Panel = this.ribbonPanel4;
-            this.ribbonTabItem4.Text = "صدور بلیط";
+            this.ribbonTabItem4.Text = "صدور بلیط و مشخصات حرکت";
             // 
             // buttonItem1
             // 
@@ -936,38 +1006,118 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // ribbonBar16
+            // ribbonTabItem5
             // 
-            this.ribbonBar16.AutoOverflowEnabled = true;
-            this.ribbonBar16.AutoSizeIncludesTitle = true;
+            this.ribbonTabItem5.Checked = true;
+            this.ribbonTabItem5.Name = "ribbonTabItem5";
+            this.ribbonTabItem5.Panel = this.ribbonPanel5;
+            this.ribbonTabItem5.Text = "گزارشات";
             // 
+            // ribbonPanel5
             // 
-            // 
-            this.ribbonBar16.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar16.ContainerControlProcessDialogKey = true;
-            this.ribbonBar16.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar16.DragDropSupport = true;
-            this.ribbonBar16.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnHesab});
-            this.ribbonBar16.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.ribbonBar16.Location = new System.Drawing.Point(606, 0);
-            this.ribbonBar16.Name = "ribbonBar16";
-            this.ribbonBar16.Size = new System.Drawing.Size(100, 85);
-            this.ribbonBar16.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar16.TabIndex = 6;
-            this.ribbonBar16.Text = "تعریف حساب";
+            this.ribbonPanel5.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel5.Controls.Add(this.ribbonBar18);
+            this.ribbonPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel5.Location = new System.Drawing.Point(0, 63);
+            this.ribbonPanel5.Name = "ribbonPanel5";
+            this.ribbonPanel5.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel5.Size = new System.Drawing.Size(931, 88);
             // 
             // 
             // 
-            this.ribbonBar16.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel5.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.ribbonBar16.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel5.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel5.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel5.TabIndex = 5;
+            // 
+            // ribbonBar18
+            // 
+            this.ribbonBar18.AutoOverflowEnabled = true;
+            this.ribbonBar18.AutoSizeIncludesTitle = true;
+            // 
+            // 
+            // 
+            this.ribbonBar18.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar18.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar18.ContainerControlProcessDialogKey = true;
+            this.ribbonBar18.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ribbonBar18.DragDropSupport = true;
+            this.ribbonBar18.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnReportHavapeyma});
+            this.ribbonBar18.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ribbonBar18.Location = new System.Drawing.Point(3, 0);
+            this.ribbonBar18.Name = "ribbonBar18";
+            this.ribbonBar18.Size = new System.Drawing.Size(100, 85);
+            this.ribbonBar18.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonBar18.TabIndex = 0;
+            this.ribbonBar18.Text = "گزارش گنجایش";
+            // 
+            // 
+            // 
+            this.ribbonBar18.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar18.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // btnReportHavapeyma
+            // 
+            this.btnReportHavapeyma.Image = global::Blit.Properties.Resources.icons8_align_bottom_64;
+            this.btnReportHavapeyma.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
+            this.btnReportHavapeyma.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnReportHavapeyma.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
+            this.btnReportHavapeyma.Name = "btnReportHavapeyma";
+            this.btnReportHavapeyma.SubItemsExpandWidth = 14;
+            this.btnReportHavapeyma.Click += new System.EventHandler(this.btnReportHavapeyma_Click);
+            // 
+            // btnListHarekat
+            // 
+            this.btnListHarekat.Image = global::Blit.Properties.Resources.icons8_todo_list_64;
+            this.btnListHarekat.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
+            this.btnListHarekat.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnListHarekat.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
+            this.btnListHarekat.Name = "btnListHarekat";
+            this.btnListHarekat.SubItemsExpandWidth = 14;
+            this.btnListHarekat.Click += new System.EventHandler(this.btnListHarekat_Click);
+            // 
+            // btnHarekat
+            // 
+            this.btnHarekat.Image = global::Blit.Properties.Resources.icons8_google_calendar_64;
+            this.btnHarekat.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
+            this.btnHarekat.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnHarekat.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
+            this.btnHarekat.Name = "btnHarekat";
+            this.btnHarekat.SubItemsExpandWidth = 14;
+            this.btnHarekat.Click += new System.EventHandler(this.btnHarekat_Click);
+            // 
+            // btnListBlit
+            // 
+            this.btnListBlit.Image = global::Blit.Properties.Resources.icons8_file_641;
+            this.btnListBlit.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
+            this.btnListBlit.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnListBlit.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
+            this.btnListBlit.Name = "btnListBlit";
+            this.btnListBlit.SubItemsExpandWidth = 14;
+            this.btnListBlit.Click += new System.EventHandler(this.btnListBlit_Click);
+            // 
+            // btnBlit
+            // 
+            this.btnBlit.Image = global::Blit.Properties.Resources.icons8_receipt_64;
+            this.btnBlit.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
+            this.btnBlit.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnBlit.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
+            this.btnBlit.Name = "btnBlit";
+            this.btnBlit.SubItemsExpandWidth = 14;
+            this.btnBlit.Click += new System.EventHandler(this.btnBlit_Click);
             // 
             // btnHesab
             // 
@@ -1038,25 +1188,6 @@
             this.btnMosafer.Name = "btnMosafer";
             this.btnMosafer.SubItemsExpandWidth = 14;
             this.btnMosafer.Click += new System.EventHandler(this.btnMosafer_Click);
-            // 
-            // btnListBlit
-            // 
-            this.btnListBlit.Image = global::Blit.Properties.Resources.icons8_file_641;
-            this.btnListBlit.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
-            this.btnListBlit.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnListBlit.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
-            this.btnListBlit.Name = "btnListBlit";
-            this.btnListBlit.SubItemsExpandWidth = 14;
-            // 
-            // btnBlit
-            // 
-            this.btnBlit.Image = global::Blit.Properties.Resources.icons8_receipt_64;
-            this.btnBlit.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
-            this.btnBlit.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnBlit.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
-            this.btnBlit.Name = "btnBlit";
-            this.btnBlit.SubItemsExpandWidth = 14;
-            this.btnBlit.Click += new System.EventHandler(this.btnBlit_Click);
             // 
             // btnListCity
             // 
@@ -1141,6 +1272,7 @@
             this.ribbonPanel1.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
             this.groupPanel2.PerformLayout();
+            this.ribbonPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1191,7 +1323,7 @@
         private DevComponents.DotNetBar.ButtonItem btnListNooBlit;
         private DevComponents.DotNetBar.RibbonPanel ribbonPanel4;
         private DevComponents.DotNetBar.RibbonBar ribbonBar15;
-        private DevComponents.DotNetBar.ButtonItem buttonItem4;
+        private DevComponents.DotNetBar.ButtonItem btnHarekat;
         private DevComponents.DotNetBar.RibbonBar ribbonBar14;
         private DevComponents.DotNetBar.ButtonItem btnListBlit;
         private DevComponents.DotNetBar.RibbonBar ribbonBar13;
@@ -1199,6 +1331,12 @@
         private DevComponents.DotNetBar.RibbonTabItem ribbonTabItem4;
         private DevComponents.DotNetBar.RibbonBar ribbonBar16;
         private DevComponents.DotNetBar.ButtonItem btnHesab;
+        private DevComponents.DotNetBar.RibbonBar ribbonBar17;
+        private DevComponents.DotNetBar.ButtonItem btnListHarekat;
+        private DevComponents.DotNetBar.RibbonPanel ribbonPanel5;
+        private DevComponents.DotNetBar.RibbonBar ribbonBar18;
+        private DevComponents.DotNetBar.ButtonItem btnReportHavapeyma;
+        private DevComponents.DotNetBar.RibbonTabItem ribbonTabItem5;
     }
 }
 

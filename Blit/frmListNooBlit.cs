@@ -79,11 +79,11 @@ namespace Blit
             }
             else
             {
-                StiReport Report = new StiReport();
-                Report.Load("Report/rptNooBlit.mrt");
-                Report.Compile();
-                Report["strCity"] = txtPrintNameCity.Text;
-                Report.ShowWithRibbonGUI();
+                StiReport report = new StiReport();
+                report.Load("Report/rptNooBlit.mrt");
+                report.Compile();
+                report["strCity"] = txtPrintNameCity.Text;
+                report.ShowWithRibbonGUI();
             }
         }
     }

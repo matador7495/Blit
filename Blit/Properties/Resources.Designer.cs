@@ -93,9 +93,29 @@ namespace Blit.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_align_bottom_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-align-bottom-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_available_updates_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-available-updates-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_cash_register_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cash-register-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +166,16 @@ namespace Blit.Properties {
         internal static System.Drawing.Bitmap icons8_genealogy_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-genealogy-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_google_calendar_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-google-calendar-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

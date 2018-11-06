@@ -12,6 +12,8 @@ namespace Blit
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+          //  new frmLogin().ShowDialog();
+
             //sakht shey az PersianCalendar
             System.Globalization.PersianCalendar p = new System.Globalization.PersianCalendar();
             //meghdar dehi date tavasot P , agar month yekraghmi bod yek 0 gharar bde
@@ -120,6 +122,26 @@ namespace Blit
         private void btnHesab_Click(object sender, EventArgs e)
         {
             new frmHesab().ShowDialog();
+        }
+
+        private void btnListBlit_Click(object sender, EventArgs e)
+        {
+            new frmListBlit().ShowDialog();
+        }
+
+        private void btnHarekat_Click(object sender, EventArgs e)
+        {
+            new frmHarekat().ShowDialog();
+        }
+
+        private void btnListHarekat_Click(object sender, EventArgs e)
+        {
+            new frmListHarekat().ShowDialog();
+        }
+
+        private void btnReportHavapeyma_Click(object sender, EventArgs e)
+        {
+            new frmReportHavapeyma().ShowDialog();
         }
     }
 }

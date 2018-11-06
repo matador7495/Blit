@@ -202,6 +202,7 @@
             this.btnExit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "خروج";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnEnter
             // 

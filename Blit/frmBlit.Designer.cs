@@ -65,6 +65,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.cmbShomareHesab = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.btnPardakht = new DevComponents.DotNetBar.ButtonX();
             this.btn_Edit = new DevComponents.DotNetBar.ButtonX();
             this.btnDelete = new DevComponents.DotNetBar.ButtonX();
             this.btnSave = new DevComponents.DotNetBar.ButtonX();
@@ -77,6 +80,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnPrint = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel1.SuspendLayout();
             this.groupPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumSandali)).BeginInit();
@@ -212,7 +216,7 @@
             this.txtNumSandali.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtNumSandali.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.txtNumSandali.FocusHighlightEnabled = true;
-            this.txtNumSandali.Location = new System.Drawing.Point(375, 40);
+            this.txtNumSandali.Location = new System.Drawing.Point(397, 40);
             this.txtNumSandali.MinValue = 0;
             this.txtNumSandali.Name = "txtNumSandali";
             this.txtNumSandali.Size = new System.Drawing.Size(86, 30);
@@ -221,7 +225,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(463, 43);
+            this.label13.Location = new System.Drawing.Point(485, 43);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(81, 24);
             this.label13.TabIndex = 9;
@@ -236,7 +240,7 @@
             this.txtTozihat.Border.Class = "TextBoxBorder";
             this.txtTozihat.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtTozihat.FocusHighlightEnabled = true;
-            this.txtTozihat.Location = new System.Drawing.Point(6, 77);
+            this.txtTozihat.Location = new System.Drawing.Point(8, 77);
             this.txtTozihat.Multiline = true;
             this.txtTozihat.Name = "txtTozihat";
             this.txtTozihat.PreventEnterBeep = true;
@@ -253,11 +257,11 @@
             this.txtTedadBlit.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtTedadBlit.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.txtTedadBlit.FocusHighlightEnabled = true;
-            this.txtTedadBlit.Location = new System.Drawing.Point(549, 40);
+            this.txtTedadBlit.Location = new System.Drawing.Point(573, 40);
             this.txtTedadBlit.MinValue = 1;
             this.txtTedadBlit.Name = "txtTedadBlit";
             this.txtTedadBlit.ShowUpDown = true;
-            this.txtTedadBlit.Size = new System.Drawing.Size(132, 30);
+            this.txtTedadBlit.Size = new System.Drawing.Size(109, 30);
             this.txtTedadBlit.TabIndex = 4;
             this.txtTedadBlit.Value = 1;
             // 
@@ -295,7 +299,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(686, 79);
+            this.label11.Location = new System.Drawing.Point(689, 79);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(62, 24);
             this.label11.TabIndex = 7;
@@ -307,15 +311,15 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(309, 43);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 24);
+            this.label12.Size = new System.Drawing.Size(87, 24);
             this.label12.TabIndex = 4;
-            this.label12.Text = "قیمت کل";
+            this.label12.Text = "قیمت کل(ريال)";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(683, 43);
+            this.label14.Location = new System.Drawing.Point(683, 42);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(68, 24);
             this.label14.TabIndex = 5;
@@ -514,9 +518,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(117, 42);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 24);
+            this.label10.Size = new System.Drawing.Size(68, 24);
             this.label10.TabIndex = 7;
-            this.label10.Text = "قیمت";
+            this.label10.Text = "قیمت(ريال)";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtNameCity
@@ -527,10 +531,10 @@
             this.txtNameCity.Border.Class = "TextBoxBorder";
             this.txtNameCity.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtNameCity.FocusHighlightEnabled = true;
-            this.txtNameCity.Location = new System.Drawing.Point(164, 39);
+            this.txtNameCity.Location = new System.Drawing.Point(191, 39);
             this.txtNameCity.Name = "txtNameCity";
             this.txtNameCity.PreventEnterBeep = true;
-            this.txtNameCity.Size = new System.Drawing.Size(137, 30);
+            this.txtNameCity.Size = new System.Drawing.Size(110, 30);
             this.txtNameCity.TabIndex = 7;
             // 
             // txtNooBlit
@@ -654,6 +658,10 @@
             this.groupPanel3.BackColor = System.Drawing.Color.Transparent;
             this.groupPanel3.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel3.Controls.Add(this.btnPrint);
+            this.groupPanel3.Controls.Add(this.label18);
+            this.groupPanel3.Controls.Add(this.cmbShomareHesab);
+            this.groupPanel3.Controls.Add(this.btnPardakht);
             this.groupPanel3.Controls.Add(this.btn_Edit);
             this.groupPanel3.Controls.Add(this.btnDelete);
             this.groupPanel3.Controls.Add(this.btnSave);
@@ -692,13 +700,52 @@
             this.groupPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel3.TabIndex = 3;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(294, 5);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(119, 24);
+            this.label18.TabIndex = 6;
+            this.label18.Text = "شماره حساب شرکت";
+            // 
+            // cmbShomareHesab
+            // 
+            this.cmbShomareHesab.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbShomareHesab.DisplayMember = "Text";
+            this.cmbShomareHesab.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbShomareHesab.FocusHighlightEnabled = true;
+            this.cmbShomareHesab.FormattingEnabled = true;
+            this.cmbShomareHesab.ItemHeight = 25;
+            this.cmbShomareHesab.Location = new System.Drawing.Point(139, 2);
+            this.cmbShomareHesab.Name = "cmbShomareHesab";
+            this.cmbShomareHesab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cmbShomareHesab.Size = new System.Drawing.Size(153, 31);
+            this.cmbShomareHesab.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmbShomareHesab.TabIndex = 5;
+            // 
+            // btnPardakht
+            // 
+            this.btnPardakht.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnPardakht.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnPardakht.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPardakht.Image = global::Blit.Properties.Resources.icons8_cash_register_64;
+            this.btnPardakht.ImageFixedSize = new System.Drawing.Size(32, 32);
+            this.btnPardakht.Location = new System.Drawing.Point(8, 0);
+            this.btnPardakht.Name = "btnPardakht";
+            this.btnPardakht.Size = new System.Drawing.Size(125, 34);
+            this.btnPardakht.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnPardakht.TabIndex = 3;
+            this.btnPardakht.Text = "پرداخت نقدی";
+            this.btnPardakht.Click += new System.EventHandler(this.btnPardakht_Click);
+            // 
             // btn_Edit
             // 
             this.btn_Edit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_Edit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btn_Edit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Edit.Image = global::Blit.Properties.Resources.edit_32;
-            this.btn_Edit.Location = new System.Drawing.Point(252, 0);
+            this.btn_Edit.Location = new System.Drawing.Point(496, 0);
             this.btn_Edit.Name = "btn_Edit";
             this.btn_Edit.Size = new System.Drawing.Size(91, 34);
             this.btn_Edit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -712,7 +759,7 @@
             this.btnDelete.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.Image = global::Blit.Properties.Resources.delete_32;
-            this.btnDelete.Location = new System.Drawing.Point(349, 0);
+            this.btnDelete.Location = new System.Drawing.Point(593, 0);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 34);
             this.btnDelete.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -726,7 +773,7 @@
             this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.Image = global::Blit.Properties.Resources.plus_32;
-            this.btnSave.Location = new System.Drawing.Point(430, 0);
+            this.btnSave.Location = new System.Drawing.Point(674, 0);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 34);
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -872,9 +919,22 @@
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnPrint.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrint.Image = global::Blit.Properties.Resources.icons8_print_32;
+            this.btnPrint.Location = new System.Drawing.Point(419, 0);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(75, 34);
+            this.btnPrint.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnPrint.TabIndex = 7;
+            this.btnPrint.Text = "چاپ";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // frmBlit
             // 
@@ -903,6 +963,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTedadSandali)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGheymat)).EndInit();
             this.groupPanel3.ResumeLayout(false);
+            this.groupPanel3.PerformLayout();
             this.groupPanel2.ResumeLayout(false);
             this.groupPanel2.PerformLayout();
             this.ResumeLayout(false);
@@ -959,5 +1020,9 @@
         private System.Windows.Forms.Label lblTime;
         private DevComponents.Editors.IntegerInput txtTedadBlit;
         private DevComponents.DotNetBar.ButtonX btnReload;
+        private DevComponents.DotNetBar.ButtonX btnPardakht;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbShomareHesab;
+        private System.Windows.Forms.Label label18;
+        private DevComponents.DotNetBar.ButtonX btnPrint;
     }
 }
