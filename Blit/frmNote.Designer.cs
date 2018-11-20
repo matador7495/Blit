@@ -1,6 +1,6 @@
 ﻿namespace Blit
 {
-    partial class frmCitys
+    partial class frmNote
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,10 @@
         {
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.btnDelete = new DevComponents.DotNetBar.ButtonX();
-            this.btnSave = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.txtName = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtCode = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtNote = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.btnSave = new DevComponents.DotNetBar.ButtonX();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.groupPanel1.SuspendLayout();
             this.groupPanel3.SuspendLayout();
             this.groupPanel2.SuspendLayout();
@@ -53,7 +50,7 @@
             this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel1.Location = new System.Drawing.Point(0, 0);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(324, 126);
+            this.groupPanel1.Size = new System.Drawing.Size(695, 312);
             // 
             // 
             // 
@@ -89,13 +86,12 @@
             this.groupPanel3.BackColor = System.Drawing.Color.Transparent;
             this.groupPanel3.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel3.Controls.Add(this.btnDelete);
             this.groupPanel3.Controls.Add(this.btnSave);
             this.groupPanel3.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupPanel3.Location = new System.Drawing.Point(0, 80);
+            this.groupPanel3.Location = new System.Drawing.Point(0, 266);
             this.groupPanel3.Name = "groupPanel3";
-            this.groupPanel3.Size = new System.Drawing.Size(318, 40);
+            this.groupPanel3.Size = new System.Drawing.Size(689, 40);
             // 
             // 
             // 
@@ -124,50 +120,19 @@
             // 
             // 
             this.groupPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel3.TabIndex = 2;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnDelete.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.Image = global::Blit.Properties.Resources.delete_32;
-            this.btnDelete.Location = new System.Drawing.Point(78, 0);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 34);
-            this.btnDelete.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnDelete.TabIndex = 1;
-            this.btnDelete.Text = "حذف";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.Image = global::Blit.Properties.Resources.plus_32;
-            this.btnSave.Location = new System.Drawing.Point(159, 0);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 34);
-            this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSave.TabIndex = 0;
-            this.btnSave.Text = "ثبت";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.groupPanel3.TabIndex = 0;
             // 
             // groupPanel2
             // 
             this.groupPanel2.BackColor = System.Drawing.Color.Transparent;
             this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel2.Controls.Add(this.txtName);
-            this.groupPanel2.Controls.Add(this.txtCode);
-            this.groupPanel2.Controls.Add(this.label2);
-            this.groupPanel2.Controls.Add(this.label1);
+            this.groupPanel2.Controls.Add(this.txtNote);
             this.groupPanel2.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupPanel2.Location = new System.Drawing.Point(0, 0);
             this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(318, 77);
+            this.groupPanel2.Size = new System.Drawing.Size(689, 264);
             // 
             // 
             // 
@@ -198,71 +163,61 @@
             this.groupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel2.TabIndex = 1;
             // 
-            // txtName
+            // txtNote
             // 
             // 
             // 
             // 
-            this.txtName.Border.Class = "TextBoxBorder";
-            this.txtName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtName.FocusHighlightEnabled = true;
-            this.txtName.Location = new System.Drawing.Point(5, 38);
-            this.txtName.Name = "txtName";
-            this.txtName.PreventEnterBeep = true;
-            this.txtName.Size = new System.Drawing.Size(250, 30);
-            this.txtName.TabIndex = 2;
+            this.txtNote.Border.Class = "TextBoxBorder";
+            this.txtNote.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtNote.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtNote.FocusHighlightEnabled = true;
+            this.txtNote.Location = new System.Drawing.Point(0, 0);
+            this.txtNote.Multiline = true;
+            this.txtNote.Name = "txtNote";
+            this.txtNote.PreventEnterBeep = true;
+            this.txtNote.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtNote.Size = new System.Drawing.Size(683, 258);
+            this.txtNote.TabIndex = 5;
+            this.txtNote.WatermarkText = "یادداشت خود را وارد کنید ....";
             // 
-            // txtCode
+            // btnSave
             // 
+            this.btnSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.Image = global::Blit.Properties.Resources.plus_32;
+            this.btnSave.Location = new System.Drawing.Point(225, 0);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(232, 34);
+            this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnSave.TabIndex = 0;
+            this.btnSave.Text = "ذخیره یادداشت در فایل WORD";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // saveFileDialog1
             // 
+            this.saveFileDialog1.Filter = "Text Only (*.doc) | *.doc";
+            this.saveFileDialog1.Title = "ذخیره یادداشت";
             // 
-            this.txtCode.Border.Class = "TextBoxBorder";
-            this.txtCode.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtCode.FocusHighlightEnabled = true;
-            this.txtCode.Location = new System.Drawing.Point(5, 2);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.PreventEnterBeep = true;
-            this.txtCode.Size = new System.Drawing.Size(250, 30);
-            this.txtCode.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(257, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "نام شهر";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(257, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "کد شهر";
-            // 
-            // FrmCitys
+            // frmNote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(324, 126);
+            this.ClientSize = new System.Drawing.Size(695, 312);
             this.Controls.Add(this.groupPanel1);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.Font = new System.Drawing.Font("IRANSans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.MaximizeBox = false;
-            this.Name = "FrmCitys";
+            this.Name = "frmNote";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "تعریف شهر ها";
+            this.Text = "ذخیره یادداشت ها";
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel3.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
-            this.groupPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -272,11 +227,8 @@
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel3;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private DevComponents.DotNetBar.ButtonX btnDelete;
         private DevComponents.DotNetBar.ButtonX btnSave;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtName;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtCode;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtNote;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

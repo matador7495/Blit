@@ -28,7 +28,9 @@ namespace Blit
                 }
                 else
                 {
-                    MessageBox.Show("خطایی رخ داده است، مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("ابتدا در بخش تنظیمات مشخصات آژانس را وارد کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    new frmSetting().ShowDialog();
+                    this.Close();
                 }
             }
             catch (Exception)

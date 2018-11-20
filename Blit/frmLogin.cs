@@ -19,8 +19,8 @@ namespace Blit
             {
                 int i = 0;//check kardane mojod bodan Username
                 query.OpenConection();
-                var qe = query.ExecuteScaler("Select Count(*) from tblUsers where Uname ='" + txtUserName.Text + "' And Pass  ='" + txtPassword.Text + "'");
-                i = (int)qe.ExecuteScalar();//chon dar database taghiri eijad nemishe
+                var q = query.ExecuteScaler("Select Count(*) from tblUsers where Uname ='" + txtUserName.Text + "' And Pass  ='" + txtPassword.Text + "'");
+                i = (int)q.ExecuteScalar();//chon dar database taghiri eijad nemishe
                 if (i > 0)
                 {
                     this.Close();

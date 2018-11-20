@@ -15,7 +15,7 @@ namespace Connection_Class
 	/// </summary>
     public class Connection_Query
     {
-        // string ConnectionString = "Data Source=.;Initial Catalog=Blit;Integrated Security=True";//method 1
+        //string ConnectionString = @"Data Source=.;AttachDbFilename=|DataDirectory|DataBase\Blit.mdf;Integrated Security=True";//method 1
         string ConnectionString = "server=.;database=Blit;trusted_connection=true";//method 2
         SqlConnection con;
 

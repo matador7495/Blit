@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Stimulsoft.Report;
 
 namespace Blit
 {
@@ -126,6 +127,14 @@ namespace Blit
             txtShomareHesab.Text = dgvHesab[2, dgvHesab.CurrentRow.Index].Value.ToString();
             txtMojodi.Text = dgvHesab[3, dgvHesab.CurrentRow.Index].Value.ToString();
             txtTozihat.Text = dgvHesab[4, dgvHesab.CurrentRow.Index].Value.ToString();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            StiReport report = new StiReport();
+            report.Load("Report/rptHesab.mrt");
+            report.Compile();
+            report.ShowWithRibbonGUI();
         }
     }
 }

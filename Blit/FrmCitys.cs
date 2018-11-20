@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace Blit
 {
-    public partial class FrmCitys : DevComponents.DotNetBar.Office2007Form
+    public partial class frmCitys : DevComponents.DotNetBar.Office2007Form
     {
         Connection_Query query = new Connection_Query();
 
-        public FrmCitys()
+        public frmCitys()
         {
             InitializeComponent();
         }

@@ -123,6 +123,26 @@ namespace Blit.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_data_backup_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-data-backup-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_database_administrator_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-database-administrator-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_enter_42 {
             get {
                 object obj = ResourceManager.GetObject("icons8-enter-42", resourceCulture);
@@ -153,16 +173,6 @@ namespace Blit.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_file_641 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-file-641", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_genealogy_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-genealogy-64", resourceCulture);
@@ -176,6 +186,36 @@ namespace Blit.Properties {
         internal static System.Drawing.Bitmap icons8_google_calendar_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-google-calendar-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_increase_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-increase-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_map_marker_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-map-marker-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_microsoft_word_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-microsoft-word-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -296,6 +336,16 @@ namespace Blit.Properties {
         internal static System.Drawing.Bitmap LogoLogin {
             get {
                 object obj = ResourceManager.GetObject("LogoLogin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogoMainMenu {
+            get {
+                object obj = ResourceManager.GetObject("LogoMainMenu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

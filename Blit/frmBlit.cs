@@ -29,13 +29,15 @@ namespace Blit
                 }
                 else
                 {
-                    MessageBox.Show("خطایی رخ داده است، مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("ابتدا در بخش تنظیمات مشخصات آژانس را وارد کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    new frmSetting().ShowDialog();
+                    this.Close();
                 }
             }
             catch (Exception)
             {
                 MessageBox.Show("در اتصال به پایگاه داده خطایی رخ داده است ، لطفا مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
-}
+            }
             query.CloseConnection();
         }
 
@@ -126,7 +128,7 @@ namespace Blit
             System.Globalization.PersianCalendar p = new System.Globalization.PersianCalendar();
             //meghdar dehi date tavasot P , agar month yekraghmi bod yek 0 gharar bde
             mskTarikh.Text = p.GetYear(DateTime.Now).ToString() + p.GetMonth(DateTime.Now).ToString("0#") + p.GetDayOfMonth(DateTime.Now).ToString("0#");
-       
+
             cmbShomareHesab.DataSource = query.ShowData("SELECT Convert (nvarchar(50),ShomareHesab)  + ' - ' + NameHesab  AS Hesab ,ShomareHesab AS shomare_h FROM tblHesab");
             cmbShomareHesab.DisplayMember = "Hesab";
             cmbShomareHesab.ValueMember = "shomare_h";
@@ -245,7 +247,7 @@ namespace Blit
                 StiReport report = new StiReport();
                 report.Load("Report/rptBlit.mrt");
                 report.Compile();
-                report["Code"] =Convert.ToInt32( txtCode.Text);
+                report["Code"] = Convert.ToInt32(txtCode.Text);
                 report["strNameAgency"] = NameAgency;
                 report["strAddressA"] = AddressA;
                 report["strTelA"] = TelA;

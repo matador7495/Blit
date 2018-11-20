@@ -1,6 +1,6 @@
 ﻿namespace Blit
 {
-    partial class frmCitys
+    partial class frmReport
     {
         /// <summary>
         /// Required designer variable.
@@ -30,12 +30,19 @@
         {
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.btnDelete = new DevComponents.DotNetBar.ButtonX();
-            this.btnSave = new DevComponents.DotNetBar.ButtonX();
+            this.btnPrint = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.txtName = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtCode = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblTedadGroupha = new System.Windows.Forms.Label();
+            this.lblTedadBlit = new System.Windows.Forms.Label();
+            this.lblHavapeyma = new System.Windows.Forms.Label();
+            this.lblMojodi = new System.Windows.Forms.Label();
+            this.lblParvaz = new System.Windows.Forms.Label();
+            this.lblCity = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupPanel1.SuspendLayout();
             this.groupPanel3.SuspendLayout();
@@ -53,7 +60,7 @@
             this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanel1.Location = new System.Drawing.Point(0, 0);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(324, 126);
+            this.groupPanel1.Size = new System.Drawing.Size(584, 173);
             // 
             // 
             // 
@@ -89,13 +96,12 @@
             this.groupPanel3.BackColor = System.Drawing.Color.Transparent;
             this.groupPanel3.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel3.Controls.Add(this.btnDelete);
-            this.groupPanel3.Controls.Add(this.btnSave);
+            this.groupPanel3.Controls.Add(this.btnPrint);
             this.groupPanel3.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupPanel3.Location = new System.Drawing.Point(0, 80);
+            this.groupPanel3.Location = new System.Drawing.Point(0, 127);
             this.groupPanel3.Name = "groupPanel3";
-            this.groupPanel3.Size = new System.Drawing.Size(318, 40);
+            this.groupPanel3.Size = new System.Drawing.Size(578, 40);
             // 
             // 
             // 
@@ -124,50 +130,44 @@
             // 
             // 
             this.groupPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel3.TabIndex = 2;
+            this.groupPanel3.TabIndex = 0;
             // 
-            // btnDelete
+            // btnPrint
             // 
-            this.btnDelete.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnDelete.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.Image = global::Blit.Properties.Resources.delete_32;
-            this.btnDelete.Location = new System.Drawing.Point(78, 0);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 34);
-            this.btnDelete.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnDelete.TabIndex = 1;
-            this.btnDelete.Text = "حذف";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.Image = global::Blit.Properties.Resources.plus_32;
-            this.btnSave.Location = new System.Drawing.Point(159, 0);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 34);
-            this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSave.TabIndex = 0;
-            this.btnSave.Text = "ثبت";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnPrint.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnPrint.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrint.Image = global::Blit.Properties.Resources.icons8_print_32;
+            this.btnPrint.Location = new System.Drawing.Point(249, 0);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(75, 34);
+            this.btnPrint.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnPrint.TabIndex = 4;
+            this.btnPrint.Text = "چاپ";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // groupPanel2
             // 
             this.groupPanel2.BackColor = System.Drawing.Color.Transparent;
             this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel2.Controls.Add(this.txtName);
-            this.groupPanel2.Controls.Add(this.txtCode);
-            this.groupPanel2.Controls.Add(this.label2);
+            this.groupPanel2.Controls.Add(this.lblTedadGroupha);
+            this.groupPanel2.Controls.Add(this.lblTedadBlit);
+            this.groupPanel2.Controls.Add(this.lblHavapeyma);
+            this.groupPanel2.Controls.Add(this.lblMojodi);
+            this.groupPanel2.Controls.Add(this.lblParvaz);
+            this.groupPanel2.Controls.Add(this.lblCity);
+            this.groupPanel2.Controls.Add(this.label10);
+            this.groupPanel2.Controls.Add(this.label6);
+            this.groupPanel2.Controls.Add(this.label3);
+            this.groupPanel2.Controls.Add(this.label9);
+            this.groupPanel2.Controls.Add(this.label5);
             this.groupPanel2.Controls.Add(this.label1);
             this.groupPanel2.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupPanel2.Location = new System.Drawing.Point(0, 0);
             this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(318, 77);
+            this.groupPanel2.Size = new System.Drawing.Size(578, 126);
             // 
             // 
             // 
@@ -198,67 +198,136 @@
             this.groupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel2.TabIndex = 1;
             // 
-            // txtName
+            // lblTedadGroupha
             // 
+            this.lblTedadGroupha.AutoSize = true;
+            this.lblTedadGroupha.ForeColor = System.Drawing.Color.Red;
+            this.lblTedadGroupha.Location = new System.Drawing.Point(15, 91);
+            this.lblTedadGroupha.Name = "lblTedadGroupha";
+            this.lblTedadGroupha.Size = new System.Drawing.Size(13, 24);
+            this.lblTedadGroupha.TabIndex = 0;
+            this.lblTedadGroupha.Text = ".";
             // 
+            // lblTedadBlit
             // 
+            this.lblTedadBlit.AutoSize = true;
+            this.lblTedadBlit.ForeColor = System.Drawing.Color.Red;
+            this.lblTedadBlit.Location = new System.Drawing.Point(15, 47);
+            this.lblTedadBlit.Name = "lblTedadBlit";
+            this.lblTedadBlit.Size = new System.Drawing.Size(13, 24);
+            this.lblTedadBlit.TabIndex = 0;
+            this.lblTedadBlit.Text = ".";
             // 
-            this.txtName.Border.Class = "TextBoxBorder";
-            this.txtName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtName.FocusHighlightEnabled = true;
-            this.txtName.Location = new System.Drawing.Point(5, 38);
-            this.txtName.Name = "txtName";
-            this.txtName.PreventEnterBeep = true;
-            this.txtName.Size = new System.Drawing.Size(250, 30);
-            this.txtName.TabIndex = 2;
+            // lblHavapeyma
             // 
-            // txtCode
+            this.lblHavapeyma.AutoSize = true;
+            this.lblHavapeyma.ForeColor = System.Drawing.Color.Red;
+            this.lblHavapeyma.Location = new System.Drawing.Point(15, 6);
+            this.lblHavapeyma.Name = "lblHavapeyma";
+            this.lblHavapeyma.Size = new System.Drawing.Size(13, 24);
+            this.lblHavapeyma.TabIndex = 0;
+            this.lblHavapeyma.Text = ".";
             // 
+            // lblMojodi
             // 
+            this.lblMojodi.AutoSize = true;
+            this.lblMojodi.ForeColor = System.Drawing.Color.Red;
+            this.lblMojodi.Location = new System.Drawing.Point(321, 91);
+            this.lblMojodi.Name = "lblMojodi";
+            this.lblMojodi.Size = new System.Drawing.Size(13, 24);
+            this.lblMojodi.TabIndex = 0;
+            this.lblMojodi.Text = ".";
             // 
+            // lblParvaz
             // 
-            this.txtCode.Border.Class = "TextBoxBorder";
-            this.txtCode.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtCode.FocusHighlightEnabled = true;
-            this.txtCode.Location = new System.Drawing.Point(5, 2);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.PreventEnterBeep = true;
-            this.txtCode.Size = new System.Drawing.Size(250, 30);
-            this.txtCode.TabIndex = 0;
+            this.lblParvaz.AutoSize = true;
+            this.lblParvaz.ForeColor = System.Drawing.Color.Red;
+            this.lblParvaz.Location = new System.Drawing.Point(321, 47);
+            this.lblParvaz.Name = "lblParvaz";
+            this.lblParvaz.Size = new System.Drawing.Size(13, 24);
+            this.lblParvaz.TabIndex = 0;
+            this.lblParvaz.Text = ".";
             // 
-            // label2
+            // lblCity
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(257, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "نام شهر";
+            this.lblCity.AutoSize = true;
+            this.lblCity.ForeColor = System.Drawing.Color.Red;
+            this.lblCity.Location = new System.Drawing.Point(321, 6);
+            this.lblCity.Name = "lblCity";
+            this.lblCity.Size = new System.Drawing.Size(13, 24);
+            this.lblCity.TabIndex = 0;
+            this.lblCity.Text = ".";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(112, 91);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(138, 24);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "تعداد گروه های هواپیما";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(105, 47);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(145, 24);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "تعداد بلیط های رزرو شده";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(155, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 24);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "تعداد هواپیماها";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(426, 91);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(132, 24);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "موجودی کل حساب ها";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(409, 47);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(149, 24);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "تعداد پروازهای انجام شده";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(257, 5);
+            this.label1.Location = new System.Drawing.Point(436, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 24);
+            this.label1.Size = new System.Drawing.Size(122, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "کد شهر";
+            this.label1.Text = "تعداد شهرهای مقصد";
             // 
-            // FrmCitys
+            // frmReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(324, 126);
+            this.ClientSize = new System.Drawing.Size(584, 173);
             this.Controls.Add(this.groupPanel1);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.Font = new System.Drawing.Font("IRANSans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.MaximizeBox = false;
-            this.Name = "FrmCitys";
+            this.Name = "frmReport";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "تعریف شهر ها";
+            this.Text = "گزارش عملکرد کلی";
+            this.Load += new System.EventHandler(this.frmReport_Load);
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel3.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
@@ -272,11 +341,18 @@
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel3;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCity;
         private System.Windows.Forms.Label label1;
-        private DevComponents.DotNetBar.ButtonX btnDelete;
-        private DevComponents.DotNetBar.ButtonX btnSave;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtName;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtCode;
+        private System.Windows.Forms.Label lblTedadGroupha;
+        private System.Windows.Forms.Label lblTedadBlit;
+        private System.Windows.Forms.Label lblHavapeyma;
+        private System.Windows.Forms.Label lblMojodi;
+        private System.Windows.Forms.Label lblParvaz;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label5;
+        private DevComponents.DotNetBar.ButtonX btnPrint;
     }
 }

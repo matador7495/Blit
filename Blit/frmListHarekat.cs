@@ -41,8 +41,9 @@ namespace Blit
             query.OpenConection();
             try
             {
+               
                 int x = Convert.ToInt32(dgvHarekat.SelectedCells[0].Value);
-                query.ExecuteQueries("delte from tblHarekat where ID=" + x);
+                query.ExecuteQueries("delete from tblHarekat where id=" + x);
                 MessageBox.Show("عملیات با موفقیت انجام شد", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Display();
             }

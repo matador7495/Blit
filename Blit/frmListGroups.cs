@@ -30,7 +30,9 @@ namespace Blit
                 }
                 else
                 {
-                    MessageBox.Show("خطایی رخ داده است، مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("ابتدا در بخش تنظیمات مشخصات آژانس را وارد کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    new frmSetting().ShowDialog();
+                    this.Close();
                 }
             }
             catch (Exception)
@@ -64,6 +66,8 @@ namespace Blit
             query.OpenConection();
             try
             {
+
+
                 int x = Convert.ToInt32(dgvGroups.SelectedCells[0].Value);
                 query.ExecuteQueries("delete from tblGroups where ID=" + x);
                 MessageBox.Show("عملیات با موفقیت انجام شد", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Windows.Forms;
+using Connection_Class;
 
 namespace Blit
 {
     public partial class frmMain : Form
     {
+        Connection_Query query = new Connection_Query();
         public frmMain()
         {
             InitializeComponent();
@@ -12,7 +14,7 @@ namespace Blit
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-          //  new frmLogin().ShowDialog();
+            new frmLogin().ShowDialog();
 
             //sakht shey az PersianCalendar
             System.Globalization.PersianCalendar p = new System.Globalization.PersianCalendar();
@@ -76,7 +78,7 @@ namespace Blit
 
         private void btnCitys_Click(object sender, EventArgs e)
         {
-            new FrmCitys().ShowDialog();
+            new frmCitys().ShowDialog();
         }
 
         private void btnListCity_Click(object sender, EventArgs e)
@@ -142,6 +144,82 @@ namespace Blit
         private void btnReportHavapeyma_Click(object sender, EventArgs e)
         {
             new frmReportHavapeyma().ShowDialog();
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            new frmReport().ShowDialog();
+        }
+
+        private void btnNote_Click(object sender, EventArgs e)
+        {
+            new frmNote().ShowDialog();
+        }
+
+        public void BackUpDB(string FileName)
+        {
+            try
+            {
+                query.OpenConection();
+                query.ExecuteQueries(@"BACKUP DATABASE [Blit] TO  DISK='" + FileName + "' WITH NOFORMAT, NOINIT, NAME = N'Blit-Full Database Backup', SKIP, NOREWIND, NOUNLOAD");
+                MessageBox.Show("عملیات پشتیبان گیری با موفقیت انجام شد", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("خطایی رخ داده است، مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                query.CloseConnection();
+            }
+        }
+
+        public void RestoreDB(string FileName)
+        {
+            try
+            {
+                query.OpenConection();
+                query.ExecuteQueries(@"Alter DATABASE [Blit] SET SINGLE_USER with ROLLBACK IMMEDIATE " + "USE master " + " RESTORE DATABASE [Blit] FROM DISK =N'" + FileName + "' with RECOVERY,REPLACE");
+                MessageBox.Show("عملیات بازیابی با موفقیت انجام شد", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("خطایی رخ داده است، مجددا تلاش کنید", "Blit", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                query.CloseConnection();
+            }
+        }
+
+        private void btnBackUp_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.OverwritePrompt = true;
+            sfd.Filter = @"SQL BackUp FIles ALL Files (*.*) |*.*| (*.Bak)|*.Bak";
+            sfd.DefaultExt = "Bak";
+            sfd.FilterIndex = 1;
+            sfd.FileName = DateTime.Now.ToString("dd-MM-yyyy_HH-mm-ss");
+            sfd.Title = "BackUp SQL Files";
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                BackUpDB(sfd.FileName);
+            }
+        }
+
+        private void btnRestore_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = @"SQL BackUp FIles ALL Files (*.*) |*.*| (*.Bak)|*.Bak";
+            ofd.FilterIndex = 1;
+            ofd.Title = "BackUp SQL Files";
+            ofd.FileName = DateTime.Now.ToString("dd-MM-yyyy_HH-mm-ss");
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                RestoreDB(ofd.FileName);
+            }
         }
     }
 }

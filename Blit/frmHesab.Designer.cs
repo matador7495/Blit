@@ -40,21 +40,22 @@
             this.Mojodi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tozihat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.btn_Edit = new DevComponents.DotNetBar.ButtonX();
+            this.btnDelete = new DevComponents.DotNetBar.ButtonX();
+            this.btnSave = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.txtShomareHesab = new DevComponents.Editors.IntegerInput();
             this.txtMojodi = new DevComponents.Editors.IntegerInput();
             this.txtTozihat = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtNameHesab = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtCode = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.btnSearch = new DevComponents.DotNetBar.ButtonX();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_Edit = new DevComponents.DotNetBar.ButtonX();
-            this.btnDelete = new DevComponents.DotNetBar.ButtonX();
-            this.btnSave = new DevComponents.DotNetBar.ButtonX();
-            this.btnSearch = new DevComponents.DotNetBar.ButtonX();
+            this.btnPrint = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel1.SuspendLayout();
             this.groupPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHesab)).BeginInit();
@@ -239,6 +240,7 @@
             this.groupPanel3.BackColor = System.Drawing.Color.Transparent;
             this.groupPanel3.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel3.Controls.Add(this.btnPrint);
             this.groupPanel3.Controls.Add(this.btn_Edit);
             this.groupPanel3.Controls.Add(this.btnDelete);
             this.groupPanel3.Controls.Add(this.btnSave);
@@ -276,6 +278,48 @@
             // 
             this.groupPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel3.TabIndex = 1;
+            // 
+            // btn_Edit
+            // 
+            this.btn_Edit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_Edit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btn_Edit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Edit.Image = global::Blit.Properties.Resources.edit_32;
+            this.btn_Edit.Location = new System.Drawing.Point(206, 0);
+            this.btn_Edit.Name = "btn_Edit";
+            this.btn_Edit.Size = new System.Drawing.Size(91, 34);
+            this.btn_Edit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btn_Edit.TabIndex = 2;
+            this.btn_Edit.Text = "ویرایش";
+            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnDelete.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.Image = global::Blit.Properties.Resources.delete_32;
+            this.btnDelete.Location = new System.Drawing.Point(303, 0);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 34);
+            this.btnDelete.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnDelete.TabIndex = 1;
+            this.btnDelete.Text = "حذف";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.Image = global::Blit.Properties.Resources.plus_32;
+            this.btnSave.Location = new System.Drawing.Point(384, 0);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 34);
+            this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnSave.TabIndex = 0;
+            this.btnSave.Text = "ثبت";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // groupPanel2
             // 
@@ -401,6 +445,19 @@
             this.txtCode.Size = new System.Drawing.Size(203, 30);
             this.txtCode.TabIndex = 0;
             // 
+            // btnSearch
+            // 
+            this.btnSearch.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSearch.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.Image = global::Blit.Properties.Resources.icons8_search_32;
+            this.btnSearch.Location = new System.Drawing.Point(306, 1);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(39, 30);
+            this.btnSearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnSearch.TabIndex = 1;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -446,60 +503,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "کد";
             // 
-            // btn_Edit
+            // btnPrint
             // 
-            this.btn_Edit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btn_Edit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btn_Edit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Edit.Image = global::Blit.Properties.Resources.edit_32;
-            this.btn_Edit.Location = new System.Drawing.Point(166, 0);
-            this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.Size = new System.Drawing.Size(91, 34);
-            this.btn_Edit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btn_Edit.TabIndex = 2;
-            this.btn_Edit.Text = "ویرایش";
-            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnDelete.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.Image = global::Blit.Properties.Resources.delete_32;
-            this.btnDelete.Location = new System.Drawing.Point(263, 0);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 34);
-            this.btnDelete.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnDelete.TabIndex = 1;
-            this.btnDelete.Text = "حذف";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.Image = global::Blit.Properties.Resources.plus_32;
-            this.btnSave.Location = new System.Drawing.Point(344, 0);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 34);
-            this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSave.TabIndex = 0;
-            this.btnSave.Text = "ثبت";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnSearch.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.Image = global::Blit.Properties.Resources.icons8_search_32;
-            this.btnSearch.Location = new System.Drawing.Point(306, 1);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(39, 30);
-            this.btnSearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSearch.TabIndex = 1;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnPrint.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnPrint.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrint.Image = global::Blit.Properties.Resources.icons8_print_32;
+            this.btnPrint.Location = new System.Drawing.Point(125, 0);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(75, 34);
+            this.btnPrint.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnPrint.TabIndex = 3;
+            this.btnPrint.Text = "چاپ";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // frmHesab
             // 
@@ -555,5 +571,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ShomareHesab;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mojodi;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tozihat;
+        private DevComponents.DotNetBar.ButtonX btnPrint;
     }
 }

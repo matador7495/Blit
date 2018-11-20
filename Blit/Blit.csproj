@@ -46,6 +46,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>deskicon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar2, Version=12.8.0.6, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="Stimulsoft.Base, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
@@ -89,11 +92,11 @@
     <Compile Include="frmBlit.Designer.cs">
       <DependentUpon>frmBlit.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCitys.cs">
+    <Compile Include="frmCitys.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmCitys.Designer.cs">
-      <DependentUpon>FrmCitys.cs</DependentUpon>
+      <DependentUpon>frmCitys.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGroups.cs">
       <SubType>Form</SubType>
@@ -179,6 +182,18 @@
     <Compile Include="frmNooBlit.Designer.cs">
       <DependentUpon>frmNooBlit.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNote.Designer.cs">
+      <DependentUpon>frmNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmReportHavapeyma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,7 +224,7 @@
       <DependentUpon>frmBlit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCitys.resx">
-      <DependentUpon>FrmCitys.cs</DependentUpon>
+      <DependentUpon>frmCitys.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGroups.resx">
       <DependentUpon>frmGroups.cs</DependentUpon>
@@ -252,6 +267,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNooBlit.resx">
       <DependentUpon>frmNooBlit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNote.resx">
+      <DependentUpon>frmNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportHavapeyma.resx">
       <DependentUpon>frmReportHavapeyma.cs</DependentUpon>
@@ -367,9 +388,6 @@
     <None Include="Resources\icons8-receipt-64.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-file-641.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8-available-updates-32.png" />
   </ItemGroup>
   <ItemGroup>
@@ -383,6 +401,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-align-bottom-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-increase-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-map-marker-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-microsoft-word-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoMainMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-database-administrator-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-data-backup-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="deskicon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
